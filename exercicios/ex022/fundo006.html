@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de Imagem de Fundo</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             height: 100vh;
             background-position: center center;
-            background-repeat: repeat;
+            background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         main{
@@ -20,7 +21,7 @@
             border: 1px solid black;
             padding: 10px;
             border-radius: 15px;
-            width: 400px;
+            max-width: 400px;
         }
 
 

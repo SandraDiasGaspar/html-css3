@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body{
+header{
     background-color: black;
-    color: white;
+    width: 400px;
 }

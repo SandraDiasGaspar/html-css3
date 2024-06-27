@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas escolares</title>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    table{
+        width: 600px;
+        border-collapse: collapse;
+        
+    }
+    tr, th, td{
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    th{
+        background-color: grey;
+        color: white;
+    }
+     
+    </style>
 </head>
 <body>
     <table>
         <thead>
             <tr>
-                <th>Área</th>
-                <th>Disciplinas</th>
-                <th>Notas</th>
-                <th>Nota 1</th>
-                <th>Nota2</th>
-                <th>Média</th>
+                <th rowspan="3" scope="col">Área</th>
+                <th rowspan="3" scope="colgroup">Disciplinas</th>
+                <th colspan="2" scope="colgroup" >Notas</th>
+                <th rowspan="2" scope="colgroup">Média</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Exatas</th>
+                <td rowspan="4" scope="rowgroup"                ><strong>Exatas</strong></th>
                 <td>Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -44,11 +62,11 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <th>Média de Exatas</th>
-                <td>0.0</td>
+                <th colspan="4">Média de Exatas</th>
+                <th>0.0</td>
             </tr>
             <tr>
-                <th>Humanas</th>
+                <td rowspan="2"><strong>Humanas</strong></th>
                 <td>História</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -61,8 +79,8 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <th>Média de Humanas</th>
-                <td>0.0</td>
+                <th colspan="4">Média de Humanas</th>
+                <th>0.0</td>
             </tr>
         
         </tbody>

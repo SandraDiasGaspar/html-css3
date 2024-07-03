@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="ficheiro.txt" autocomplete="on" method="get">
+        <p>
+            <label for="inome">Nome</label>:
+            <input type="text" name="nome" id="inome" required minlength="5" maxlength="12" size="20" placeholder="Nome de usuário" autocomplete="name" >
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" required min="5" max="15" size="5" placeholder="0 a 10" step="0.1" autocomplete="on" value="5">
+        </p> 
+        <p>
+            <label for="imes">Período Letivo</label>
+            <input type="month" name="mes" id="imes" value="2024-07">
+        </p>
+        <p>
+            <label for="idiaprova">Dia da Prova</label>
+            <input type="date" name="diaprova" id="idiaprova" value="2024-07-02">
+        </p>
+        <p>
+            <label for="ihorario">Horário da Prova</label>
+            <input type="time" name="horario" id="ihorario">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+
+
+
+    </form>
+</body>
+</html>

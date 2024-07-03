@@ -4,12 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        fieldset{
+            color: rgb(19, 204, 120);
+            border: 1px solid rgb(19, 204, 120);
+            border-radius: 10px;
+        }
+        legend{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        div{
+            padding: 5px;
+        }
+        label {
+            padding: 5px 5px 5px 0px;
+            border: ;
+        }
+        input{
+            padding: 5px;
+            border: 5px;
+        }
+        select {
+            padding: 5px;
+            border: 5px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+
+    </header>
+    <main>
     <form action="ficheiro.txt" method="post" autocomplete="on">
-
-
-
+        <fieldset>
+            <legend>Personal Data</legend><br>
+            <div>
+                <label for="ichega">Arrive From Portugal?</label><br>
+                <select name="chega" id="ichega">
+                        <option>Yes</option>
+                        <option>Non</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="inome">Name:</label><br>
+                <input type="text" name="nome" id="inome" required placeholder="Name" autocomplete="name" minlength="3" maxlength="30">
+            </div>
+            <br>
+            <div>
+                <label for="iphone">Phone:</label><br>
+                <input type="tel" name="phone" id="iphone" required autocomplete="tel" placeholder="Phone">
+            </div>
+            <br>
+            <div>
+                <label for="iexpdate">Expiration Date:</label><br>
+                <input type="date" name="dataexp" id="iexpdate">
+            </div>
+            <br>
+            <div>
+                <label for="inac">Nationality:</label><br>
+                <select name="nacionalidade" id="inac">
+                        <option>Afeganistão</option>
+                        <option>Albânia</option>
+                        <option>Argélia</option>
+                        <option>Samoa Americana</option>
+                        <option>Andorra</option>
+                        <option>Angola</option>
+                        <option>Antígua e Barbuda</option>
+                        <option>Argentina</option>
+                        <option>Armênia</option>
+                        <option>Aruda</option>
+                        <option>Austrália</option>
+                        <option>Áustria</option>
+                        <option>Azerbaijão</option>
+                        <option>Bahamas</option>
+                        <option>Bangladesh</option>
+                        <option>Barbados</option>
+                        <option>Bielorrúsia</option>
+                        <option>Bélgica</option>
+                        <option>Belize</option>
+                        <option>Benim</option>
+                        <option>Bermudas</option>
+                        <option>Butão</option>
+                        <option>Bolívia</option>
+                        <option>Bósnia e Herzegovina</option>
+                        <option>Botsuana</option>
+                        <option>Brasil</option>
+                        <option>Ilhas Virgens Britânicas</option>
+                        <option>Brunei Darussalam</option>
+                        <option>Bulgária</option>
+                        <option>Burkina Faso</option>
+                        <option>Burundi</option>
+                        <option>Cabo Verde</option>
+                        <option>Cambodia</option>
+                        <option>Cameroon</option>
+                        <option>Canada</option>
+                        <option>Cayman Islands</option>
+                        <option>Central African Republic</option>
+                        <option>Chad</option>
+                        <option>Channel Islands</option>
+                        <option>Chile</option>
+                        <option>China</option>
+                        <option>Cisjordânia e Gaza</option>
+                        <option>Colombia</option>
+                        <option>Comoros</option>
+                        <option>Congo, Dem. Rep.</option>
+                        <option>Congo, Rep.</option>
+                        <option>Costa Rica</option>
+                        <option>Côte d'Ivoire</option>
+                        <option>Croatia</option>
+                        <option>Cuba</option>
+                        <option>Curação</option>
+                        <option>Cyprus</option>
+                        <option>Czech Republic</option>
+                        <option>Denmark</option>
+                        <option>Djibouti</option>
+                        <option>Dominica</option>
+                        <option>Dominican Republic</option>
+                        <option>Ecuador</option>
+                        <option>Egypt. Arab Rep</option>
+                        <option>El Salvador</option>
+                        <option>Equatorial Guinea</option>
+                        <option>Eritrea</option>
+                        <option>Estonia</option>
+                        <option>Eswatini</option>
+                        <option>Ethiopia</option>
+                        <option>Faroe Islands</option>
+                        <option>Fiji</option>
+                        <option>Finland</option>
+                        <option>France</option>
+                        <option>French Polynesia</option>
+                        <option>Gabon</option>
+                        <option>Gambia, The</option>
+                        <option>Georgia</option>
+                        <option>Germany</option>
+                        <option>Ghana</option>
+                        <option>Gibraltar</option>
+                        <option>Greece</option>
+                        <option>Greenland</option>
+                        <option>Grenada</option>
+                        <option>Guam</option>
+                        <option>Guatemala</option>
+                        <option>Guinea</option>
+                        <option>Guinea-Bissau</option>
+                        <option>Guyana</option>
+                        <option>Haiti</option>
+                        <option>Honduras</option>
+                        <option>Hong Kong SAR</option>
+                        <option>Hungary</option>
+                        <option>Iceland</option>
+                        <option>Ilhas Virgens (EUA)</option>
+                        <option>India</option>
+                        <option>Indonésia</option>
+                        <option>Iran. Islamic Rep</option>
+                        <option>Iraq</option>
+                        <option>Ireland</option>
+                        <option>Isle of Man</option>
+                        <option>Israel</option>
+                        <option>Italy</option>
+                        <option>Jamaica</option>
+                        <option>Japan</option>
+                        <option>Kazakhstan</option>
+                        <option>Kenya</option>
+                        <option>Kiribati</option>
+                        <option>Korea, Dem. People's Rep</option>
+                        <option>Korea, Rep</option>
+                        <option>Kosovo</option>
+                        <option>Kuwait</option>
+                        <option>Kyrgyz Republic</option>
+                        <option>Lao PDR</option>
+                        <option>Latvia</option>
+                        <option>Lebanon</option>
+                        <option>Lêmen, Rep.</option>
+                        <option>Lesotho</option>
+                        <option>Liberia</option>
+                        <option>Libya</option>
+                        <option>Liechtenstein</option>
+                        <option>Lithuania</option>
+                        <option>Luxembourg</option>
+                        <option>Macao SAR</option>
+                        <option>Madagascar</option>
+                        <option>Malawi</option>
+                        <option>Malaysia</option>
+                        <option>Maldives</option>
+                        <option>Mali</option>
+                        <option>Malta</option>
+                        <option>Marshall Islands</option>
+                        <option>Mauritania</option>
+                        <option>Mauritius</option>
+                        <option>Mexico</option>
+                        <option>Micronesia, Fed. Sts</option>
+                        <option>Moldova</option>
+                        <option>Monaco</option>
+                        <option>Mongolia</option>
+                        <option>Montenegro</option>
+                        <option>Morocco</option>
+                        <option>Mozambique</option>
+                        <option>Myanmar</option>
+                        <option>Namibia</option>
+                        <option>Nauru</option>
+                        <option>Nepal</option>
+                        <option>Netherlands</option>
+                        <option>New Zealand</option>
+                        <option>Nicaragua</option>
+                        <option>Niger</option>
+                        <option>Nigeria</option>
+                        <option>North Macedonia</option>
+                        <option>Northern Mariana Islands</option>
+                        <option>Norway</option>
+                        <option>Oman</option>
+                        <option>Pakistan</option>
+                        <option>Palau</option>
+                        <option>Panama</option>
+                        <option>Papua New Guinea</option>
+                        <option>Paraguay</option>
+                        <option>Peru</option>
+                        <option>Philippines</option>
+                        <option>Poland</option>
+                        <option>Portugal</option>
+                        <option>Puerto Rico</option>
+                        <option>Qatar</option>
+                        <option>Romania</option>
+                        <option>Russian Federation</option>
+                        <option>Rwanda</option>
+                        <option>Samoa</option>
+                        <option>San Marino</option>
+                        <option>São Tomé and Principe</option>
+                        <option>Saudi Arabia</option>
+                        <option>Senegal</option>
+                        <option>Serbia</option>
+                        <option>Seychelles</option>
+                        <option>Sierra Leone</option>
+                        <option>Singapore</option>
+                        <option>Sint Maarten (Dutch part)</option>
+                        <option>Slovak Republic</option>
+                        <option>Slovenia</option>
+                        <option>Solomon Islands</option>
+                        <option>Somalia</option>
+                        <option>South Africa</option>
+                        <option>South Sudan</option>
+                        <option>Spain</option>
+                        <option>Sri Lanka</option>
+                        <option>St. Kitts and Nevis</option>
+                        <option>St. Lucia</option>
+                        <option>St. Martin (French part)</option>
+                        <option>St. Vincent and the Grenadines</option>
+                        <option>Sudan</option>
+                        <option>Suriname</option>
+                        <option>Sweden</option>
+                        <option>Switzerland</option>
+                        <option>Syrian Arab Republic</option>
+                        <option>Tajikistan</option>
+                        <option>Tanzania</option>
+                        <option>Thailand</option>
+                        <option>Timor-Leste</option>
+                        <option>Togo</option>
+                        <option>Tonga</option>
+                        <option>Trinidad and Tobago</option>
+                        <option>Tunisia</option>
+                        <option>Turkey</option>
+                        <option>Turkmenistan</option>
+                        <option>Turks and Caicos Islands</option>
+                        <option>Tuvalu</option>
+                        <option>Uganda</option>
+                        <option>Ukraine</option>
+                        <option>United Arab. Emirates</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                        <option>Uruguay</option>
+                        <option>Uzbequistão</option>
+                        <option>Vanuatu</option>
+                        <option>Venezuela, RB</option>
+                        <option>Vietnã</option>
+                        <option>Zâmbia</option>
+                        <option>Zimbábue</option>
+            </div>
+            </select>
+                   <br>
+                   <br>
+            <div>
+              <label for="isurnome">Surname:</label><br>
+                <input type="text" name="surnome" id="isurnome" required placeholder="Surname" autocomplete="name" minlength="3" maxlength="30">
+            </div>
+            <br>
+            <div>
+                <label for="idoc">Document Type:</label><br>
+                <select name="doc" id="idoc">
+                        <option>Passport</option>
+                        <option>Citizen Card</option>
+                </select>
+                </div>
+            <br>
+            <div>
+                <label for="ibirth">Birth Date:</label><br>
+                <input type="date" name="birth" id="ibirth">
+            </div>
+            <br>
+            <div>
+                <label for="imail">Email:</label><br>
+                <input type="email" name="email" id="imail" autocomplete="email" placeholder="Email">
+            </div>
+            <br>
+            <div>
+                <label for="inumber">Identification Number:</label><br>
+                <input type="number" name="numcartao" id="inumber" minlength="7" maxlength="20" placeholder="Card Number">
+            </div>
+        </fieldset>
+       
+    <br>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>        
     </form>
+</main>
+<footer>
+
+</footer>
+
+
 </body>
 </html>

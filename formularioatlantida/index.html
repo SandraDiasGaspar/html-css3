@@ -12,7 +12,7 @@
    <!-- <header>
         <img src="imagens/head.png" alt="headgrande">
     </header>-->
-   <div class="container">
+    <!--<div class="container">-->
     <form action="https://formsubmit.co/sandragaspar@cloudsupport.pt" method="POST" autocomplete="on" center>
         <img src="imagens/head.png" alt="headgrande">
 
@@ -702,28 +702,48 @@
                         <br>
                           <h3>Please Select Hotel dates</h3>
                               <fielset>
-                                <div class="hoteldatas">
+                              <div class="hoteldatas">
                                   <div class="datahotel">
                                       <label for="istart">Start Date:</label><br>
-                                      <input type="date" name="start" id="istart" placeholder="Select Date">
+                                      <select id="date-select" name="date-select">
+                                        <option value="2024-09-11">2024-09-11</option>
+                                        <option value="2024-09-12">2024-09-12</option>
+                                        <option value="2024-09-13">2024-09-13</option>
+                                        <option value="2024-09-14">2424-09-14</option>
+                                    </select>
+                                </div>
+
+                                    <div class="datahotel">
+                                        <label for="ifimest">End Date:</label>
+                                        <select id="ifimest" name="enddate">
+                                            <option value="2024-09-11">2024-09-11</option>
+                                            <option value="2024-09-12">2024-09-12</option>
+                                            <option value="2024-09-13">2024-09-13</option>
+                                            <option value="2024-09-14">2024-09-14</option>
+                                        </select>
+                                    </div>
+
+                                <!--      <input type="date" name="start" id="istart" placeholder="Select Date">
                                   </div>
                                   <div>
                                     <label for="ifimest">End Date:</label><br>
                                     <input type="date" name="enddate" id="ifimest" placeholder="Select Date">
                                     </div>
-                               </div>
+                               </div>-->
                               </fielset>
                    </div>
                    <h2>Aditional Requests</h2><br>
+                    <div class="adicional"                    >
                     <label for="imsg"></label>
                     <textarea name="msg" id="imsg"></textarea>
                    <br>
+                    </div>
                    <h3>All personal expenses are the responsibility of the participants.</h3>
     <div class="botao">
         <button type="submit">Submit Form</button>
     </div>       
     </form>
-</div>
+<!--</div>-->
 
 </main>
 </body>

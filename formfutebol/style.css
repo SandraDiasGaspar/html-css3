@@ -60,7 +60,7 @@
         }
         
         fieldset{
-            font-size: 13px;
+            font-size: 1em;
             columns:3;
             color: rgb(19, 204, 120);
             border: 1px solid rgb(19, 204, 120);
@@ -264,7 +264,9 @@
         .quest{
             text-align: left;
         }
-        
+       .portugues{
+        display: none;
+       } 
        
  
 

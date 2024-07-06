@@ -7,9 +7,9 @@
         
         html, body{
             background-position: center;
-            margin: auto;
-            width: 100%;
+             width: 100%;
             height: 100%;
+            box-sizing: border-box;
         }
 
 
@@ -29,9 +29,8 @@
                                
         }
         main{
-           /* min-width: 320px;
-            max-width: 1050px;*/
-            margin: auto;
+            width: 100%;
+            margin: 0 auto;
         }
         .container{
           /*  min-width: 320px;
@@ -53,9 +52,11 @@
             background-color: black;
             color: white;
            
-            width: 1000px;
+            width: 100%;
+            max-width: 1050px;
             padding: 10px;
-            margin: auto;
+            margin: 0 auto;
+            box-sizing: border-box;
             
         }
         
@@ -229,14 +230,24 @@
             margin: 5px;
         }
         
-        img {
-            background-size: cover;
-            /*padding: 5px;*/
+        header img {
+           /* background-size: cover;
+            /*padding: 5px;
             display: flex;
             width: 100%;
             justify-content: center;
-            align-items: center;
+            align-items: center;*/
+            max-width: 100%;
+            height: auto;
         }
+
+        header{
+            background-color: black;
+            width: 100%;
+            text-align: center;
+        }
+
+
 
         .adicional{
             background-color: black;

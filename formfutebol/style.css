@@ -1,23 +1,26 @@
 @charset "UTF-8";
-*{
+        *{
             margin: 0px;
             padding: 0px;
             font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
         
-        html, body{
-            background-position: center;
+        /*html, */body{
+            /*background-position: center;*/
              width: 100%;
             height: 100%;
             box-sizing: border-box;
+            background-color: black;
+            margin: 0;
+            padding: 0;
         }
 
 
         body{
          /*   min-width: 80%;
             max-width: 100%;*/
-            width: 100%;
-            height: 100%;
+          /*  width: 100%;
+            height: 100%;*/
             background-color: white;
             text-align: center;
           
@@ -31,6 +34,7 @@
         main{
             width: 100%;
             margin: 0 auto;
+            max-width: 1050px;
         }
         .container{
           /*  min-width: 320px;
@@ -41,19 +45,20 @@
             display: flex;
         }
         form{
-            display: inline-block;
+           /* display: inline-block;*/
+           display: block;
 
-            flex-direction: column;
-            justify-content: center;
+         /*   flex-direction: column;
+            justify-content: center;*/
             
 
             text-align: left;
-            position: relative;
+            /*position: relative;*/
             background-color: black;
             color: white;
            
             width: 100%;
-            max-width: 1050px;
+            /*max-width: 1050px;*/
             padding: 10px;
             margin: 0 auto;
             box-sizing: border-box;
@@ -233,9 +238,9 @@
         header img {
            /* background-size: cover;
             /*padding: 5px;
-            display: flex;
+            display: flex;*/
             width: 100%;
-            justify-content: center;
+            /*justify-content: center;
             align-items: center;*/
             max-width: 100%;
             height: auto;
@@ -245,6 +250,8 @@
             background-color: black;
             width: 100%;
             text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
         }
 
 

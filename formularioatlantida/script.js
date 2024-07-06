@@ -1,5 +1,5 @@
 function toggleDiv(show) {
-    const opcaoclt = document.getElementById('opcaoclt');
+    constvar opcaoclt = document.getElementById('opcaoclt');
     if (show) {
         extraFields.style.display = 'block';
     } else {

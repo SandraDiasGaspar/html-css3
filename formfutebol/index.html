@@ -4,34 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="scripts.js"></script>
-    
-    
+          <style>
+        #opcaoclt{
+            display: none;
+        }
+           *{
+            margin: 0px;
+            padding: 0px;
+            font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        
+        body{
+            background-color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: 0;
+            padding: 0;
+                               
+        }
+        main{
+            width: 100%;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: black;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header img {
+            max-width: 100%;
+             height: auto;
+         }
+
+        form{
+            width: 100%;
+        }
+        
+        fieldset{
+            font-size: 1em;
+            columns:3;
+            color: rgb(19, 204, 120);
+            border: 1px solid rgb(19, 204, 120);
+            border-radius: 10px;
+            margin-bottom: 20px;
+          }
+
+          .quest{
+            margin-bottom: 10px;
+        }
+
+        .botao{
+            text-align: center;
+        }
+
+        .botao button{
+            color: white;
+            background-color: rgb(19, 204, 120);
+            padding: 10px 20px;
+             font-size: 16px;
+        }
+
+        .hoteldatas, .booking2, .booking{
+            display: flex;
+            flex-wrap: wrap;
+            color: rgb(19, 204, 120);
+            gap: 10px;
+        }
+        .hoteldatas div, .booking2 div, .booking div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        h2{
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(19, 204, 120);
+        }
+
+        h4{
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(19, 204, 120);
+            padding: 5px;
+           
+        }
+
+        h3{
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(19, 204, 120);
+        }
+        p{
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(19, 204, 120);
+        }
+     
+        input{
+            color: rgb(128, 116, 116);
+        }
+        label{
+            color: rgb(19, 204, 120);
+           
+        }
+
+        select{
+            color: rgb(128, 116, 116);
+        }
+       
+        table {
+            background-color: white;
+            color: black;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            width: 100%;        
+        }
+        th, td{
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th{
+            background-color: rgb(25, 255, 146);
+            color: rgb(63, 60, 60);
+            font-weight: normal;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+       
+        .adicional{
+            background-color: black;
+        }
+
+      </style>
 </head>
 <body>
     <main>
-    <header>
-        <img src="img/head.png" alt="headgrande">
-    </header>
-       
+        <header>
+         <img src="imagens/head.png" alt="head">
+        </header>
+    
     <form action="https://formsubmit.co/sandragaspar@cloudsupport.pt" method="POST" autocomplete="on" center>
         
-        <div class="personal">
         <h2>Personal Data</h2>
-        </div>
         <fieldset>
-                 <div class="pessoal">
-                    <div class="quest">
-                        <label for="ichega">Arrive From Portugal?</label><br>
-                        <select name="chega" id="ichega">
-                                <option>Yes</option>
-                                <option>Non</option>
-                        </select>
-                    </div>
+
+            <div class="pessoal">
+            <div class="quest">
+                <label for="ichega">Arrive From Portugal?</label><br>
+               <select name="chega" id="ichega" onchange="toggleFlightInfo()">
+                        <option value="yes">Yes</option>
+                        <option value="no">Non</option>
                 </select>
                 </div>
-            </div>
                 <div class="quest">
                 <label for="inome">Name:</label><br>
                 <input type="text" name="nome" id="inome" required placeholder="Name" autocomplete="name" minlength="3" maxlength="30">
@@ -257,8 +392,8 @@
                         <option>Vietnã</option>
                         <option>Zâmbia</option>
                         <option>Zimbábue</option>
-            </div>
-            </select>
+                 </select>
+                </div>
             <div class="quest">
               <label for="isurnome">Surname:</label><br>
                 <input type="text" name="surnome" id="isurnome" required placeholder="Surname" autocomplete="name" minlength="3" maxlength="30">
@@ -286,16 +421,83 @@
                 <label for="inumber">Identification Number:</label><br>
                 <input type="number" name="numcartao" id="inumber" minlength="7" maxlength="20" placeholder="Card Number" required>
             </div>
-           <!-- <div class="quest">
-                <label for="iexpdate">Expiration Date:</label><br>
-                <input type="date" name="dataexp" id="iexpdate" required>
-            </div>-->
         </div>
+        
         </fieldset>
+        <div id="opcaoclt">
        
-      <div>
-        <h4>Additional costs will be charged for travel companion (optional)</h4>
+        <h3>Flight Information</h3>
+        <h2> If you are coming from outside of Portugal, please fill in the form below</h2><br>
+        <fieldset>
+            <div class="voo">
+                <label for="ifrom2">From:</label><br>
+                <input type="text" name="from" id="ifrom2">
+            </div>
+            <div class="to">
+                <label for="ito">To:</label><br>
+                <input type="text" name="to" id="ito">
+            </div>
+            <div class="depdate">
+                <label for="idatepar">Departure Date:</label><br>
+                <input type="date" name="depdate" id="idatepar">
+            </div>
+            <div class="ardate">
+                <label for="iardate">Arrival Date:</label><br>
+                <input type="date" name="ardate" id="iardate">
+            </div>
+            <div class="deptime">
+                <label for="ideptm">Departure Time:</label><br>
+                <input type="time" name="deptime" id="ideptm">
+           </div>
+            <div class="arvtime">
+                <label for="iarvtime">To:</label><br>
+                <input type="time" name="arvtime" id="iarvtime">
+            </div>
+        </fieldset>
+
+        <h4>Return Flight</h4>
+        <fieldset>
+            <div class="retorno">
+                <div class="voo2">
+                    <label for="ifrom3">From</label><br>
+                    <input type="text" name="from3" id="ifrom3">
+                </div>
+                <div class="to">
+                    <label for="ito2">To</label><br>
+                    <input type="text" name="to" id="ito2">
+                </div>
+                <div class="depdate">
+                    <label for="idatepar2">Departure Date</label><br>
+                    <input type="date" name="depdate2" id="idatepar2">
+                </div>
+                <div class="ardate2">
+                    <label for="iardate2">Arrival Date</label><br>
+                    <input type="date" name="ardate2" id="iardate2">
+                </div>
+                <div class="deptime2">
+                    <label for="ideptm2">Departure Time</label><br>
+                    <input type="time" name="deptime2" id="ideptm2">
+               </div>
+                <div class="arvtime2">
+                    <label for="iarvtime2">To</label><br>
+                    <input type="time" name="arvtime2" id="iarvtime2">
+                </div>
+            </div>
+        </fieldset>
     </div>
+    <script>
+        function toggleFlightInfo() {
+            const select = document.getElementById('ichega');
+            const flightInfoDiv = document.getElementById('opcaoclt');
+            if (select.value === 'no') {
+                flightInfoDiv.style.display = 'block';
+            } else {
+                flightInfoDiv.style.display = 'none';
+            }
+        }
+    </script>
+
+     <h4>Additional costs will be charged for travel companion (optional)</h4>
                 <fielset>
                  <div class="opcao">
                     <label for="ititulo">Title:</label><br>
@@ -533,7 +735,6 @@
                                     <option>Vietnã</option>
                                     <option>Zâmbia</option>
                                     <option>Zimbábue</option>
-                        </div>
                         </select>
                         <div class="quest">
                           <label for="isurnome2">Surname:</label><br>
@@ -559,15 +760,9 @@
                 </div>
                 </fielset>
                <br>
-               <div>
             <h2>Transfer Booking</h2>
-            </div>
-            <div>
             <h4>Transfers in and out are included.</h4>
-            </div>
-            <div>
             <p>If you need additional transfer services please fill in the detais below:</p>
-            </div>
             <fieldset>
             <div class="booking">
                 <div class="quest">
@@ -590,6 +785,7 @@
                     <label for="isvtime">Time:</label><br>
                     <input type="time" name="svtime" id="isvtime" autocomplete="on" placeholder="Service Time">
                  </div>
+                </div>
             </fieldset>
             <fieldset>
                 <div class="booking2">
@@ -616,9 +812,7 @@
                  </div>
             </fieldset>
             <br>
-            <div>
                  <h2>Hotel Booking</h2>
-            </div>
                        <table>
                         <div id="container">
                           <div class="tabela">
@@ -710,13 +904,12 @@
                                             <label for="iage2"></label>
                                             <input type="number" name="age2" id="iage2">
                                         </td>
+                                    </tr>
                           </div>
                         </div>
                         </table>
                         <br>
-                        <div>
                           <h3>Please Select Hotel dates</h3>
-                        </div>
                               <fielset>
                               <div class="hoteldatas">
                                   <div class="datahotel">
@@ -739,32 +932,20 @@
                                         </select>
                                     </div>
 
-                                <!--      <input type="date" name="start" id="istart" placeholder="Select Date">
-                                  </div>
-                                  <div>
-                                    <label for="ifimest">End Date:</label><br>
-                                    <input type="date" name="enddate" id="ifimest" placeholder="Select Date">
-                                    </div>
-                               </div>-->
+                                </div>            
                               </fielset>
-                   </div>
-                   <div>
+                   
                    <h2>Aditional Requests</h2><br>
-                    </div>
                     <div class="adicional"                    >
                     <label for="imsg"></label>
                     <textarea name="msg" id="imsg"></textarea>
                    <br>
                     </div>
-                    <div>
                    <h3>All personal expenses are the responsibility of the participants.</h3>
-                </div>
     <div class="botao">
         <button type="submit">Submit Form</button>
     </div>       
     </form>
-
-
 </main>
 </body>
 </html>

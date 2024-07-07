@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+}
+
+body{
+ 
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /*min-width: 280px;
+    max-width: 950px;*/
+    margin: 0;
+    padding: 0;
+                       
+}
+main{
+    width: 100%;
+    margin: 0 auto;
+   
+    padding: 20px;
+    box-sizing: border-box;
+    /*min-width: 320px;*/
+    max-width: 1050px;
+    margin: auto;
+    
+    
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+header img {
+    /*background-size: cover;
+    /*padding: 5px;
+    display: flex;*/
+    max-width: 100%;
+ /*   justify-content: center;
+    align-items: center;*/
+    height: auto;
+}
+
+/*.container{
+  /*  min-width: 320px;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}*/
+form{
+    display: inline-block;
+
+    flex-direction: column;
+    justify-content: center;
+    
+
+    text-align: left;
+    position: relative;
+    background-color: black;
+    color: white;
+   
+    width: 100%;
+    padding: 0px;
+    margin: auto;
+    
+}
+
+fieldset{
+    font-size: 1em;
+    columns:3;
+    color: rgb(19, 204, 120);
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+ /*   width: 950px;    */
+    margin-bottom: 20px;
+   /* float: left;*/
+    padding: 10px;
+    max-width: 1050px;
+  }
+
+.quest{
+   /* text-align: left;*/
+   margin-bottom: 10px;
+}
+
+.botao button{
+  /*  width: 400px;
+    border-radius: 20px;*/
+    color: white;
+    background-color: rgb(19, 204, 120);
+    padding: 10px 20px;
+   /* text-align: center;
+    display: inline-block;*/
+    font-size: 16px;
+}
+.botao{
+    text-align: center;
+}
+#bookingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hoteldatas, .booking2{
+    /*columns: 2;*/
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: rgb(19, 204, 120);
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+    /*width: 950px;    */
+     gap: 10px;
+    /*margin: 5px;*/
+    flex-direction: column;
+
+}
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.btn{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: darkgreen;
+}
+
+
+/*.hoteldatas div, .booking2 div, .booking div {
+    flex: 1 1 100%;
+    min-width: 200px;
+}*/
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(19, 204, 120);
+}
+
+h4{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(19, 204, 120);
+    padding: 5px;
+   
+}
+
+h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(19, 204, 120);
+}
+p{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(19, 204, 120);
+}
+
+input{
+   padding: 5px;
+    border: 5px;
+    width: 200px;
+    border-radius: 20px;
+    color: rgb(128, 116, 116);
+    
+}
+
+label{
+    padding: 5px;
+    border: 5px;
+    width: 200px;
+    border-radius: 20px;
+    color: rgb(19, 204, 120);
+   
+}
+select{
+    padding: 5px;
+    border: 5px;
+    width: 200px;
+    border-radius: 20px;
+    color: rgb(128, 116, 116);
+}
+
+table {
+    /* position: relative;*/
+     background-color: white;
+     color: black;
+     border-collapse: collapse;
+     margin-top: 20px;
+     width: 100%;
+    
+ }
+ 
+
+ th, td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+th{
+    background-color: rgb(25, 255, 146);
+    color: rgb(63, 60, 60);
+    font-weight: normal;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.adicional{
+    background-color: black;
+}
+
+
+.opcao{
+    font-size: 1em;
+    columns:3;
+    color: rgb(19, 204, 120);
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+  /*  width: 950px;   */
+ /*  height: 200px;
+    margin: 5px;
+  /*  padding: 15px;
+    float: left;*/
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/*
+div{
+    padding: 10px;
+}
+
+
+*/  
+
+
+
+div.tabela{
+    width: 400px;
+    padding: 0px 5px 5px 5px;
+}
+
+#iqt{
+    width: 100px;
+}
+#itproom{
+    width: 320px;
+}
+#iqtad{
+    width: 100px;
+}
+#iqcri{
+    width: 100px;
+}
+#iage{
+    width: 100px;
+}
+#iage2{
+    width: 100px;
+}
+
+.hoteldatas{
+    columns: 2;
+    font-size: 1em;
+    color: rgb(19, 204, 120);
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+ /*   width: 950px;   */ 
+  /*  margin: 5px;*/
+  margin-bottom: 20px;
+}
+#iaddCompanionButton{
+    background-color: rgb(25, 255, 146);
+    color: black;
+}
+
+#clearFormButton{
+    background-color: rgb(25, 255, 146);
+    color: black;
+}
+
+.adicional{
+    background-color: black;
+}
+
+#imsg{
+    width: 950px;
+    height: 150px;
+    border-radius: 20px;
+    
+}
+
+#insButton{
+        background-color: rgb(25, 255, 146);
+        color: black;}
+
+#insButton:hover{
+    background-color: #FA7D0B;
+}
+
+.btn{
+        background-color: rgb(25, 255, 146);
+        color: black;}
+
+
+.btn:hover{
+        background-color: #FA7D0B;}
+
+#iaddCompanionButton:hover{
+        background-color: #FA7D0B;
+            
+        }
+        
+#clearFormButton:hover{
+        background-color: #FA7D0B;
+            
+        }
+        
+      
+    

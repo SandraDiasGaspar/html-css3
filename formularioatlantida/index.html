@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilo.css">
    <!-- <script defer src="script.js"></script>-->
       <style>
         #opcaoclt{
             display: none;
         }
+        #opcaoclt2{
+            display: none;
+        }
+        .booking {
+            display: none;
+        }
+
       </style>
 </head>
 <body>
@@ -17,15 +24,9 @@
         <header>
          <img src="imagens/head.png" alt="head">
         </header>
-  
-    
-    <form action="https://formsubmit.co/sandragaspar@cloudsupport.pt" method="POST" autocomplete="on" center>
-        
-
-        
-        <h2>Personal Data</h2>
+      <form action="https://formsubmit.co/sandragaspar@cloudsupport.pt" method="POST" autocomplete="on" center>
+         <h2>Personal Data</h2>
         <fieldset>
-
             <div class="pessoal">
             <div class="quest">
                 <label for="ichega">Arrive From Portugal?</label><br>
@@ -289,8 +290,12 @@
                 <input type="number" name="numcartao" id="inumber" minlength="7" maxlength="20" placeholder="Card Number" required>
             </div>
         </div>
-        
+        <div class="botaocomp">
+            <label for="iaddCompanionButton"></label><br>
+            <input type="button" id="iaddCompanionButton" value="ADD TRAVEL COMPANY" placeholder="ADD TRAVEL COMPANY">
+        </div>
         </fieldset>
+
         <div id="opcaoclt">
        
         <h3>Flight Information</h3>
@@ -352,7 +357,7 @@
             </div>
         </fieldset>
     </div>
-    <script>
+  <!--  <script>
         function toggleFlightInfo() {
             const select = document.getElementById('ichega');
             const flightInfoDiv = document.getElementById('opcaoclt');
@@ -362,9 +367,10 @@
                 flightInfoDiv.style.display = 'none';
             }
         }
-    </script>
+    </script>-->
 
-     <h4>Additional costs will be charged for travel companion (optional)</h4>
+    <div id="opcaoclt2">
+     <h4>Additional costs will be charged for travel companion</h4>
                 <fielset>
                  <div class="opcao">
                     <label for="ititulo">Title:</label><br>
@@ -602,8 +608,8 @@
                                     <option>Vietnã</option>
                                     <option>Zâmbia</option>
                                     <option>Zimbábue</option>
-                        <!--</div>-->
-                        </select>
+                                </select>
+                            </div>
                         <div class="quest">
                           <label for="isurnome2">Surname:</label><br>
                             <input type="text" name="surnome2" id="isurnome2" placeholder="Surname" autocomplete="name" minlength="3" maxlength="30">
@@ -625,12 +631,23 @@
                             <input type="date" name="dataexp" id="iexpdate" required>
                         </div>
                     </div>
+                    </fielset>
+                    <div class="botaolimpa">
+                        <label for="clearFormButton"></label><br>
+                        <input type="button" id="clearFormButton" value="REMOVE TRAVEL COMPANY"placeholder="REMOVE TRAVEL COMPANY">
+                        </div>
+    </div>
+            <br>
+            <h2>Transfer Booking</h2><br>
+            <h4>Transfers in and out are included.</h4><br>
+            <p>If you need additional transfer services please fill in the detais below:</p><br>
+            <div class="botaotranfbook">
+                <label for="insButton"></label><br>
+                <input type="button" id="insButton" value="ADD TRANSFER BOOKING"placeholder="ADD TRANSFER BOOKING">
                 </div>
-                </fielset>
-               <br>
-            <h2>Transfer Booking</h2>
-            <h4>Transfers in and out are included.</h4>
-            <p>If you need additional transfer services please fill in the detais below:</p>
+                <fieldset>
+                    <div id="bookingContainer"></div>
+                </fieldset>
             <fieldset>
             <div class="booking">
                 <div class="quest">
@@ -638,8 +655,8 @@
                     <input type="text" name="from" id="ifrom" placeholder="Airport Name, City, Hotel, Location." autocomplete="country-name">
                 </div>
                 <div class="quest">
-                    <label for="ifax">Fax number:</label><br>
-                <input type="tel" name="fax" id="ifax" autocomplete="fax" placeholder="Fax Number">
+                    <label for="ifax">Pax number:</label><br>
+                <input type="tel" name="fax" id="ifax" autocomplete="fax" placeholder="Pax Number">
                  </div>
                 <div class="quest">
                     <label for="idtservice">Date:</label><br>
@@ -653,130 +670,9 @@
                     <label for="isvtime">Time:</label><br>
                     <input type="time" name="svtime" id="isvtime" autocomplete="on" placeholder="Service Time">
                  </div>
-                </div>
+            </div>
             </fieldset>
-            <fieldset>
-                <div class="booking2">
-                 <div class="quest">
-                    <label for="ifrom">From:</label><br>
-                    <input type="text" name="from" id="ifrom" placeholder="Airport Name, City, Hotel, Location." autocomplete="country-name">
-                </div>
-                <div class="quest">
-                    <label for="ifax">Fax number:</label><br>
-                <input type="tel" name="fax" id="ifax" autocomplete="fax" placeholder="Fax Number">
-                 </div>
-                <div class="quest">
-                    <label for="idtservice">Date:</label><br>
-                    <input type="date" name="dtservice" id="idtservice" placeholder="Service Date"> 
-                </div>
-                <div class="quest">
-                    <label for="idest">To:</label><br>
-                    <input type="text" name="dest" id="idest" placeholder="Destination Name" autocomplete="country-name">
-                </div>
-                <div class="quest">
-                    <label for="isvtime">Time:</label><br>
-                    <input type="time" name="svtime" id="isvtime" autocomplete="on" placeholder="Service Time">
-                 </div>
-                 </div>
-            </fieldset>
-            <br>
-                 <h2>Hotel Booking</h2>
-                       <table>
-                        <div id="container">
-                          <div class="tabela">
-                              <tr>
-                                    <th scope="col">Qtd</th>
-                                    <th scope="col">Room type</th>
-                                    <th scope="col">Nº. Adults</th>
-                                    <th scope="col">Nº. Childs</th>
-                                    <th scope="col">Age Child 1</th>
-                                    <th scope="col">Age Child 2</th>
-                                <tr>
-                                    <td>
-                                        <label for="iqt"></label>
-                                        <select name="qt" id="iqt">
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <label for="itproom"></label>
-                                        <select name="tproom" id="itproom">
-                                        <option>Single Room BB</option>
-                                        <option>Double Room BB</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <label for="iqtad"></label>
-                                        <select name="qtad" id="iqtad">
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <label for="iqcri"></label>
-                                        <select name="qcri" id="iqcri">
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <label for="iage"></label>
-                                        <input type="number" name="age" id="iage">
-                                    </td>
-                                    <td>
-                                        <label for="iage2"></label>
-                                        <input type="number" name="age2" id="iage2">
-                                    </td>
-                                    <tr>
-                                        <td>
-                                            <label for="iqt"></label>
-                                            <select name="qt" id="iqt">
-                                            <option>0</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                  
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <label for="itproom"></label>
-                                            <select name="tproom" id="itproom">
-                                            <option>Single Room BB</option>
-                                            <option>Double Room BB</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <label for="iqtad"></label>
-                                            <select name="qtad" id="iqtad">
-                                            <option>0</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <label for="iqcri"></label>
-                                            <select name="qcri" id="iqcri">
-                                            <option>0</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <label for="iage"></label>
-                                            <input type="number" name="age" id="iage">
-                                        </td>
-                                        <td>
-                                            <label for="iage2"></label>
-                                            <input type="number" name="age2" id="iage2">
-                                        </td>
-                                    </tr>
-                          </div>
-                        </div>
-                        </table>
-                        <br>
+                          <br>
                           <h3>Please Select Hotel dates</h3>
                               <fielset>
                               <div class="hoteldatas">
@@ -814,8 +710,90 @@
         <button type="submit">Submit Form</button>
     </div>       
     </form>
-<!--</div>-->
 
+
+<script>
+    let companionFormDisplayed = false;
+
+    document.getElementById('iaddCompanionButton').addEventListener('click', function() {
+        if (!companionFormDisplayed) {
+            document.getElementById('opcaoclt2').style.display = 'block';
+            companionFormDisplayed = true;
+        }
+    });
+
+    document.getElementById('clearFormButton').addEventListener('click', function() {
+        // Hide the form
+        document.getElementById('opcaoclt2').style.display = 'none';
+        companionFormDisplayed = false;
+
+        // Clear all the input fields
+        document.getElementById('ititulo').selectedIndex = 0;
+        document.getElementById('inome2').value = '';
+        document.getElementById('idoc2').selectedIndex = 0;
+        document.getElementById('inac2').selectedIndex = 0;
+        document.getElementById('isurnome2').value = '';
+        document.getElementById('inumber2').value = '';
+        document.getElementById('ibirth2').value = '';
+        document.getElementById('imail2').value = '';
+        document.getElementById('iexpdate').value = '';
+    });
+
+    function toggleFlightInfo() {
+        const select = document.getElementById('ichega');
+        const flightInfoDiv = document.getElementById('opcaoclt');
+        if (select.value === 'no') {
+            flightInfoDiv.style.display = 'block';
+        } else {
+            flightInfoDiv.style.display = 'none';
+        }
+    }
+    
+    let bookingCount = 0;
+            const maxBookings = 3;
+
+            document.getElementById('insButton').addEventListener('click', function() {
+                if (bookingCount < maxBookings) {
+                    bookingCount++;
+                    const bookingDiv = document.createElement('div');
+                    bookingDiv.className = 'booking';
+                    bookingDiv.innerHTML = `
+                        <div class="quest">
+                            <label for="ifrom${bookingCount}">From:</label><br>
+                            <input type="text" name="from${bookingCount}" id="ifrom${bookingCount}" placeholder="Airport Name, City, Hotel, Location." autocomplete="country-name">
+                        </div>
+                        <div class="quest">
+                            <label for="ifax${bookingCount}">Fax number:</label><br>
+                            <input type="tel" name="fax${bookingCount}" id="ifax${bookingCount}" autocomplete="fax" placeholder="Fax Number">
+                        </div>
+                        <div class="quest">
+                            <label for="idtservice${bookingCount}">Date:</label><br>
+                            <input type="date" name="dtservice${bookingCount}" id="idtservice${bookingCount}" placeholder="Service Date">
+                        </div>
+                        <div class="quest">
+                            <label for="idest${bookingCount}">To:</label><br>
+                            <input type="text" name="dest${bookingCount}" id="idest${bookingCount}" placeholder="Destination Name" autocomplete="country-name">
+                        </div>
+                        <div class="quest">
+                            <label for="isvtime${bookingCount}">Time:</label><br>
+                            <input type="time" name="svtime${bookingCount}" id="isvtime${bookingCount}" autocomplete="on" placeholder="Service Time">
+                        </div>
+                        <div class="botaolimpa2">
+                            <label for="clearFormButton2-${bookingCount}"></label><br>
+                            <input type="button" id="clearFormButton2-${bookingCount}" value="REMOVE TRANSFER BOOKING" placeholder="REMOVE TRANSFER BOOKING" class="btn">
+                        </div>
+                    `;
+                    document.getElementById('bookingContainer').appendChild(bookingDiv);
+                    bookingDiv.style.display = 'block';
+
+                    document.getElementById(`clearFormButton2-${bookingCount}`).addEventListener('click', function() {
+                        bookingDiv.remove();
+                        bookingCount--;
+                    });
+                }
+            });
+        
+</script>
 </main>
 </body>
 </html>

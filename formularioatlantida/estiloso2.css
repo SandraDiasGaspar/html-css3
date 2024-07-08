@@ -4,33 +4,27 @@
     margin: 0px;
     padding: 0px;
     font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    
+    box-sizing: border-box;
 }
 
 body{
- 
     background-color: white;
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     display: flex;
-    /*min-width: 280px;
-    max-width: 950px;*/
     margin: 0;
     padding: 0;
     width: 100%;
-                       
 }
 main{
     width: 100%;
     margin: 0 auto;
-   
     padding: 20px;
     box-sizing: border-box;
     max-width: 1050px;
     /*margin: auto;*/
-    
-    
 }
 
 header{
@@ -42,26 +36,12 @@ header{
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-
 }
 header img {
-    /*background-size: cover;
-    /*padding: 5px;
-    display: flex;*/
     max-width: 100%;
- /*   justify-content: center;
-    align-items: center;*/
     height: auto;
 }
 
-/*.container{
-  /*  min-width: 320px;
-    max-width: 800px;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-}*/
 form{
     display: inline-block;
 
@@ -78,7 +58,6 @@ form{
     width: 100%;
     padding: 0px;
     margin: auto;
-    
 }
 
 fieldset{
@@ -90,17 +69,16 @@ fieldset{
  /*   width: 950px;    */
     margin-bottom: 20px;
    /* float: left;*/
-    padding: 10px;
+ /*   padding: 10px;*/
     max-width: 1050px;
-  }
+    padding: 10px;
+    width: 100%;
+}
 
 .quest{
-   /* text-align: left;*/
-   /*margin-bottom: 10px;*/
- /*   display: flex;*/
+    /*display: flex;*/
     flex-direction: column;
     margin-bottom: 10px;
-
 }
 
 .quest > input {
@@ -108,6 +86,7 @@ fieldset{
     outline: none;
     padding: 5px;
     margin: 0;
+    width: 100%;
 }
 
 .quest > select {
@@ -115,6 +94,7 @@ fieldset{
     outline: none;
     padding: 5px;
     margin: 0;
+    width: 100%;
 }
 
 .quest > textarea {
@@ -122,48 +102,50 @@ fieldset{
     outline: none;
     padding: 5px;
     margin: 0;
+    width: 100%;
 }
 
 .quest > input:focus, .quest > select:focus, .quest > textarea:focus {
     border: 1px solid rgb(19, 204, 120);
 }
 
-
-
-
-
 .botao button{
-  /*  width: 400px;
-    border-radius: 20px;*/
     color: white;
     background-color: rgb(19, 204, 120);
     padding: 10px 20px;
-   /* text-align: center;
-    display: inline-block;*/
     font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
+
+.botao button:hover{
+    background-color: #FA7D0B;
+}
+
 .botao{
     text-align: center;
+    margin-bottom: 20px;
 }
+
 #bookingContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.hoteldatas, .booking2{
-    /*columns: 2;*/
+/*.hoteldatas, */.booking2 {
     display: flex;
     flex-wrap: wrap;
     font-size: 13px;
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
     border-radius: 10px;
-    /*width: 950px;    */
-     gap: 10px;
-    /*margin: 5px;*/
+    gap: 10px;
     flex-direction: column;
-
 }
 
 .booking {
@@ -178,29 +160,8 @@ fieldset{
 fieldset.booking{
     border: none;
 }
-
-.btn{
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.btn:hover {
-    background-color: darkgreen;
-}
-
-
-/*.hoteldatas div, .booking2 div, .booking div {
-    flex: 1 1 100%;
-    min-width: 200px;
-}*/
-
 h2{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(19, 204, 120);
 }
@@ -210,7 +171,6 @@ h4{
     font-weight: bold;
     color: rgb(19, 204, 120);
     padding: 5px;
-   
 }
 
 h3{
@@ -218,6 +178,7 @@ h3{
     font-weight: bold;
     color: rgb(19, 204, 120);
 }
+
 p{
     font-size: 16px;
     font-weight: bold;
@@ -225,12 +186,13 @@ p{
 }
 
 input{
-   padding: 5px;
+    padding: 5px;
     border: 5px;
     width: 200px;
     border-radius: 20px;
     color: rgb(128, 116, 116);
-    
+   
+       
 }
 
 label{
@@ -239,8 +201,8 @@ label{
     width: 200px;
     border-radius: 20px;
     color: rgb(19, 204, 120);
-   
 }
+
 select{
     padding: 5px;
     border: 5px;
@@ -250,87 +212,88 @@ select{
 }
 
 table {
-    /* position: relative;*/
-     background-color: white;
-     color: black;
-     border-collapse: collapse;
-     margin-top: 20px;
-     width: 100%;
-    
- }
- 
+    background-color: white;
+    color: black;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
 
- th, td{
+th, td{
     text-align: center;
     border: 1px solid black;
     padding: 10px;
 }
+
 th{
     background-color: rgb(25, 255, 146);
     color: rgb(63, 60, 60);
     font-weight: normal;
 }
 
-select, input, textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
 
 .adicional{
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: black; 
+    color: rgb(19, 204, 120);
 }
-
 
 .opcao{
     font-size: 1em;
-    columns:3;
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
     border-radius: 10px;
-  /*  width: 950px;   */
- /*  height: 200px;
-    margin: 5px;
-  /*  padding: 15px;
-    float: left;*/
     margin-bottom: 20px;
 }
 
-
 div.tabela{
-    width: 400px;
+    width: 100%;
     padding: 0px 5px 5px 5px;
 }
 
 #iqt{
-    width: 100px;
+    width: 100%;
 }
 #itproom{
-    width: 320px;
+    width: 100%;
 }
 #iqtad{
-    width: 100px;
+    width: 100%;
 }
 #iqcri{
-    width: 100px;
+    width: 100%;
 }
 #iage{
-    width: 100px;
+    width: 100%;
 }
 #iage2{
-    width: 100px;
+    width: 100%;
 }
 
-.hoteldatas{
+/*.hoteldatas{
     columns: 2;
     font-size: 1em;
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
     border-radius: 10px;
- /*   width: 950px;   */ 
-  /*  margin: 5px;*/
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+}*/
+.hoteldatas{
+    font-size: 1em;
+    columns:2;
+    color: rgb(19, 204, 120);
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+ /*   width: 950px;    */
+    margin-bottom: 20px;
+   /* float: left;*/
+    padding: 10px;
+    width: 100%;
 }
+
 #iaddCompanionButton{
     background-color: rgb(25, 255, 146);
     color: black;
@@ -344,42 +307,161 @@ div.tabela{
 .adicional{
     background-color: black;
 }
+#adicional label{
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+#adicional textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(19, 204, 120);
+    box-sizing: border-box;
+    resize: vertical;
+}
+
 
 #imsg{
-    width: 950px;
+    width: 100%;
     height: 150px;
     border-radius: 20px;
-    
 }
 
 #insButton{
-        background-color: rgb(25, 255, 146);
-        color: black;}
+    background-color: rgb(25, 255, 146);
+    color: black;
+}
 
 #insButton:hover{
     background-color: #FA7D0B;
 }
 
 .btn{
-        background-color: rgb(25, 255, 146);
-        color: black;}
-
+    background-color: rgb(25, 255, 146);
+    color: black;
+}
 
 .btn:hover{
-        background-color: #FA7D0B;}
+    background-color: #FA7D0B;
+}
 
 #iaddCompanionButton:hover{
-        background-color: #FA7D0B;
-            
-        }
-        
-#clearFormButton:hover{
-        background-color: #FA7D0B;
-            
-        }
+    background-color: #FA7D0B;
+}
 
-.botaotranfbook, .botaolimpa2 {
+#clearFormButton:hover{
+    background-color: #FA7D0B;
+}
+
+@media (max-width: 768px) {
+    .tabela {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tabela tr {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 10px;
-        }
-      
-    
+    }
+
+    .tabela th, .tabela td {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .adicional {
+        padding: 10px;
+    }
+
+    .adicional textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .botao button {
+        width: 100%; 
+    }
+}
+
+footer {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+footer .informacoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1050px;
+    margin: auto;
+    gap: 20px; /* Adicionado para espaçamento entre colunas */
+}
+
+footer .coluna {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer .informacoes img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer .informacoes p,
+footer .informacoes a,
+footer .informacoes ul,
+footer .informacoes li {
+    color: black;
+    text-align: left;
+}
+
+footer .informacoes a {
+    color: red;
+}
+
+footer .rodape {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .informacoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+#success-message, #error-message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#success-message {
+    color: green;
+}
+
+#error-message {
+    color: red;
+}
+
+

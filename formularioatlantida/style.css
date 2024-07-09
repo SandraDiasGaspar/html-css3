@@ -69,6 +69,7 @@ fieldset{
 }
 
 .quest{
+    /*display: flex;*/
     flex-direction: column;
     margin-bottom: 10px;
 }
@@ -100,6 +101,36 @@ fieldset{
 .quest > input:focus, .quest > select:focus, .quest > textarea:focus {
     border: 1px solid rgb(19, 204, 120);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .botao button{
     color: white;

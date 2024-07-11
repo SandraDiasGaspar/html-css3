@@ -1,0 +1,265 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1050px;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    margin: 0px 20px 20px 20px auto;
+}
+
+fieldset {
+    font-size: 1em;
+    color: rgb(19, 204, 120);
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 1050px;
+    padding: 10px;
+    width: 100%;
+}
+
+.quest {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.pessoal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quest label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.quest > input, .quest > select, .quest > textarea {
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+}
+
+.quest > input:focus, .quest > select:focus, .quest > textarea:focus {
+    border: 1px solid rgb(19, 204, 120);
+}
+
+.botao button {
+    color: white;
+    background-color: rgb(19, 204, 120);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.botao button:hover {
+    background-color: #FA7D0B;
+}
+
+.botao {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hoteldatas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom
+    margin-bottom: 20px;
+}
+
+.datahotel {
+    flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+    .datahotel {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+#success-message, #error-message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#success-message {
+    color: green;
+}
+
+#error-message {
+    color: #d71921;
+}
+
+/* Footer styles */
+footer {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1050px;
+    margin: auto;
+}
+
+footer .coluna {
+    flex: 1 1 23%;
+    margin: 10px;
+}
+
+footer .logofim img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer .contactos p,
+footer .contactos a,
+footer .contactos ul,
+footer .contactos li,
+footer .sobrenosfim ul,
+footer .informacoesfim ul,
+footer .informacoesfim li {
+    color: black;
+    text-align: left;
+}
+
+footer .contactos a,
+footer .sobrenosfim a,
+footer .informacoesfim a {
+    color: #d71921;
+}
+
+footer .contactos p {
+    font-size: 12px;
+}
+
+footer a {
+    font-size: 14px;
+}
+
+footer .rodape {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: black;
+}
+
+footer .redes nav a {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .coluna {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+
+.footer-container h3 {
+    color: black;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.rodape p {
+    color: black;
+}
+
+.rodape a {
+    color: #d71921;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+#success-message, #error-message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#success-message {
+    color: green;
+}
+
+#error-message {
+    color: #d71921;
+}
+
+/* Additional responsiveness */
+@media (max-width: 768px) {
+    .pessoal {
+        flex-direction: column;
+    }
+}

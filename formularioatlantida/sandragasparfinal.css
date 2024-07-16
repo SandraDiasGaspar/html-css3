@@ -24,7 +24,7 @@ main{
     padding: 20px;
     box-sizing: border-box;
     max-width: 1050px;
-}
+    }
 
 header{
     background-color: black;
@@ -32,7 +32,7 @@ header{
     text-align: center;
     margin-bottom: 20px;
     max-width: 1050px;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -51,7 +51,9 @@ form{
     color: white;
     width: 100%;
     padding: 20px;
-    margin: auto;
+    margin: 0px 20px 20px 20px auto;
+ /*   border: 1px solid rgb(19, 204, 120);*/
+   /* border-radius: 10px;*/
 }
 
 fieldset{
@@ -125,10 +127,15 @@ fieldset{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 0px;
 }
 
-/*.hoteldatas, */.booking2 {
+#success-message, #error-message {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.booking2 {
     display: flex;
     flex-wrap: wrap;
     font-size: 13px;
@@ -151,37 +158,6 @@ fieldset{
 fieldset.booking{
     border: none;
 }
-
-.datahotel {
-    flex: 1;
-    padding: 10px;
-    margin: 0px;
-}
-
-@media (max-width: 768px) {
-    .datahotel {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .datahotel select {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .datahotel label {
-        margin-bottom: 5px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .datahotel select {
-        font-size: 14px;
-    }
-}
-
 h2{
     font-size: 20px;
     font-weight: bold;
@@ -213,8 +189,8 @@ input{
     width: 200px;
     border-radius: 20px;
     color: rgb(128, 116, 116);
-    font-size: 1em;
-        
+   
+       
 }
 
 label{
@@ -223,7 +199,6 @@ label{
     width: 200px;
     border-radius: 20px;
     color: rgb(19, 204, 120);
-    font-size: 1em;
 }
 
 select{
@@ -232,7 +207,6 @@ select{
     width: 200px;
     border-radius: 20px;
     color: rgb(128, 116, 116);
-    font-size: 1em;
 }
 
 table {
@@ -263,7 +237,6 @@ th{
     margin-bottom: 20px;
     background-color: black; 
     color: rgb(19, 204, 120);
-    padding: 10px;
 }
 
 .opcao{
@@ -304,68 +277,20 @@ div.tabela{
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
     border-radius: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     width: 100%;
-    justify-content: space-between;
 }
 
 #iaddCompanionButton{
     background-color: rgb(25, 255, 146);
     color: black;
-    padding: 10px 30px;
-    font-size: 1em;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: auto;
-    max-width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
-        }
-
-#iaddCompanionButton:hover {
-        background-color: #FA7D0B;
- }
-    
-@media (max-width: 768px) {
-        #iaddCompanionButton {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-        }
 }
 
 #clearFormButton{
     background-color: rgb(25, 255, 146);
     color: black;
 }
-
-#clearFormButton{
-    background-color: rgb(25, 255, 146);
-    color: black;
-    padding: 10px 30px;
-    font-size: 1em;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: auto;
-    max-width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
-        }
-
-    
-@media (max-width: 768px) {
-        #clearFormButton {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-        }
-}
-
-
 
 .adicional{
     background-color: black;
@@ -384,12 +309,10 @@ div.tabela{
     resize: vertical;
 }
 
-
 #imsg{
     width: 100%;
     height: 150px;
     border-radius: 20px;
-    padding: 10px;
 }
 
 #insButton{
@@ -401,63 +324,15 @@ div.tabela{
     background-color: #FA7D0B;
 }
 
-
-
-#insButton{
+.btn{
     background-color: rgb(25, 255, 146);
     color: black;
-    padding: 10px 30px;
-    font-size: 1em;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: auto;
-    max-width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
-  /*  margin-left: 25%;*/
-        }
-
-#insButton:hover {
-        background-color: #FA7D0B;
- }
-    
-@media (max-width: 768px) {
-        #insButton {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-        }
 }
 
 .btn:hover{
     background-color: #FA7D0B;
 }
 
-.btn{
-background-color: rgb(25, 255, 146);
-color: black;
-padding: 10px 30px;
-font-size:14px;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-width: auto;
-max-width: 100%;
-box-sizing: border-box;
-transition: background-color 0.3s ease;
-margin-bottom: 10px;
-/*  margin-left: 25%;*/
-    }
-
-@media (max-width: 768px) {
-    #btn {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-    }
-}
 #iaddCompanionButton:hover{
     background-color: #FA7D0B;
 }
@@ -596,10 +471,6 @@ footer .redes nav a {
 }
 
 
-
-
-
-
 #success-message, #error-message {
     margin-top: 20px;
     font-weight: bold;
@@ -610,7 +481,38 @@ footer .redes nav a {
 }
 
 #error-message {
-    color: red;
+    color: #d71921;
 }
 
+@media (max-width: 768px) {
+    #iaddCompanionButton {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .datahotel select {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .datahotel {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .datahotel select {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .datahotel label {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+}
 

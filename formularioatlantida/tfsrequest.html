@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link rel="stylesheet" href="estiloform.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         #opcaoclt {
             display: none;
@@ -33,45 +33,53 @@
         <header>
             <img src="imagens/head.png" alt="head">
         </header>
-        <form id="myform" action="https://formsubmit.co/sandragaspar@cloudsupport.pt" method="POST" autocomplete="on">
-            <input type="hidden" name="_template" value="table"> 
+        <form id="myform" action="https://api.staticforms.xyz/submit" method="post" id="staticform" autocomplete="on">
+            <input type="hidden" name="accessKey" value="a212c1b8-9063-488f-9d8c-3186b7a4348e">
+            <input type="hidden" name="replyTo" value="desporto@atlantidawta.com">
+            <input type="hidden" name="redirectTo" value="https://thinkingfootball.atlantidawta.com/thanks.html">
+            <input type="text" name="honeypot" style="display: none;">
+          
+            <!-- <input type="hidden" name="_template" value="table"> 
             <input type="hidden" name="_next" value="https://thinkingfootball.atlantidawta.com/thanks.html">
-            <input type="hidden" name="_subject" value="New submission Thinking Football 2024">  <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_subject" value="New submission Thinking Football 2024">  
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none"> -->
             <h2>Personal Data</h2>
             <fieldset>
                 <div class="pessoal">
                     <div class="quest">
+                        <input type="hidden" name="$Attendant Personal Data" value="----------------------------------">
                         <label for="ichega">Arrive From Portugal?</label>
-                        <select name="chega" id="ichega" onchange="toggleFlightInfo()">
+                        <select name="$Arrive from Portugal" id="ichega" onchange="toggleFlightInfo()">
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
                     </div>
                     <div class="quest">
                         <label for="inome">Name:</label>
-                        <input type="text" name="Name" id="inome" required placeholder="Name" autocomplete="name" minlength="3" maxlength="30">
+                        <input type="text" name="$Name" id="inome" required placeholder="Name" autocomplete="name" minlength="3" maxlength="30">
                         <!--<span class="error-message"></span>-->
                     </div>
                     <div class="quest">
                         <label for="isurnome">Surname:</label>
-                        <input type="text" name="Surname" id="isurnome" required placeholder="Surname" autocomplete="name" minlength="3" maxlength="30">
+                        <input type="text" name="$Surname" id="isurnome" required placeholder="Surname" autocomplete="name" minlength="3" maxlength="30">
                        <!--<span class="error-message"></span>-->
                     </div>
                     <div class="quest">
                         <label for="iphone">Phone:</label>
-                        <input type="tel" name="Phone" id="iphone" required autocomplete="tel" placeholder="Phone">
+                        <input type="tel" name="$Phone" id="iphone" required autocomplete="tel" placeholder="Phone">
                         <!--<span class="error-message"></span>-->
                     </div>
                     <div class="quest">
                         <label for="imail">Email:</label>
-                        <input type="email" name="Email" id="imail" autocomplete="email" placeholder="Email" required>
+                        <input type="email" name="$Email" id="imail" autocomplete="email" placeholder="Email" required>
                         <!--<span class="error-message"></span>-->
                     </div>
                     <div class="quest">
                         <label for="inac">Nationality:</label>
-                        <select name="Nationality" id="inac">
-                                <option>Afeganistão</option>
+                        <select name="$Nationality" id="inac">
+						<option value="">Select...</option>
+						        <option>Afeganistão</option>
                                 <option>Albânia</option>
                                 <option>Argélia</option>
                                 <option>Samoa Americana</option>
@@ -290,12 +298,12 @@
                     </div>
                     <div class="quest">
                         <label for="ibirth">Birth Date:</label>
-                        <input type="date" name="Birth Date" id="ibirth">
+                        <input type="date" name="$Birth Date" id="ibirth">
                        <!--<span class="error-message"></span>-->
                     </div>
                     <div class="quest">
                         <label for="idoc">Document Type:</label>
-                        <select name="idoc" id="idoc">
+                        <select name="$Id Document type" id="idoc">
                             <option>Passport</option>
                             <option>Citizen Card</option>
                         <!--<span class="error-message"></span>-->
@@ -303,14 +311,14 @@
                     </div>
                     <div class="quest">
                         <label for="iexpdate">Expiration Date:</label>
-                        <input type="date" name="Expiration Date" id="iexpdate">
+                        <input type="date" name="$Expiration Date" id="iexpdate">
                         <!--<span class="error-message"></span>-->
                     </div>
                     
                     
                     <div class="quest">
                         <label for="inumber">Identification Number:</label>
-                        <input type="number" name="Identification Number" id="inumber" minlength="7" maxlength="20" placeholder="Card Number" >
+                        <input type="text" name="$Identification Number" id="inumber" minlength="7" maxlength="20" placeholder="Card Number" >
                         <!--<span class="error-message"></span>-->
                     </div>
                 <!--</div>-->
@@ -322,30 +330,31 @@
 
             <div id="opcaoclt">
                 <h3>Flight Information</h3>
+				<input type="hidden" name="$Flight Information" value="----------------------------------">
                 <fieldset>
                     <div class="voo">
                         <label for="ifrom2">From:</label><br>
-                        <input type="text" name="From" id="ifrom2" placeholder="Airport, City" required>
+                        <input type="text" name="$Flight From" id="ifrom2" placeholder="Airport, City" required>
                     </div>
                     <div class="to">
                         <label for="ito">To:</label><br>
-                        <input type="text" name="To" id="ito" placeholder="Porto, Francisco Sá Carneiro" required>
+                        <input type="text" name="$Flight To" id="ito" placeholder="Porto, Francisco Sá Carneiro" required>
                     </div>
                     <div class="depdate">
                         <label for="idatepar">Departure Date:</label><br>
-                        <input type="date" name="Departure Date" id="idatepar" required>
+                        <input type="date" name="$Flight Departure Date" id="idatepar" required>
                     </div>
                     <div class="ardate">
                         <label for="iardate">Arrival Date:</label><br>
-                        <input type="date" name="Arrival Date" id="iardate" required>
+                        <input type="date" name="$Flight Arrival Date" id="iardate" required>
                     </div>
                     <div class="deptime">
                         <label for="ideptm">Departure Time:</label><br>
-                        <input type="time" name="Departure Time" id="ideptm" required placeholder="Departure Time">
+                        <input type="time" name="$Flight Departure Time" id="ideptm" required placeholder="Departure Time">
                     </div>
                     <div class="arvtime">
                         <label for="iarvtime">Arrival Time:</label><br>
-                        <input type="time" name="Arrival Time" id="iarvtime" required placeholder="Arrival Time">
+                        <input type="time" name="$Flight Arrival Time" id="iarvtime" required placeholder="Arrival Time">
                     </div>
                 </fieldset>
                 <h3>Return Flight</h3>
@@ -353,27 +362,27 @@
                     <div class="retorno">
                         <div class="voo2">
                             <label for="ifrom3">From</label><br>
-                            <input type="text" name="From" id="ifrom3" required placeholder="Porto, Francisco Sá Carneiro">
+                            <input type="text" name="$Flight From" id="ifrom3" required placeholder="Porto, Francisco Sá Carneiro">
                         </div>
                         <div class="to">
                             <label for="ito2">To</label><br>
-                            <input type="text" name="To" id="ito2" required placeholder="Airport Name, City">
+                            <input type="text" name="$Flight To" id="ito2" required placeholder="Airport Name, City">
                         </div>
                         <div class="depdate">
                             <label for="idatepar2">Departure Date</label><br>
-                            <input type="date" name="Departure Date" id="idatepar2" required>
+                            <input type="date" name="$Flight Departure Date" id="idatepar2" required>
                         </div>
                         <div class="ardate2">
                             <label for="iardate2">Arrival Date</label><br>
-                            <input type="date" name="Arrival Date" id="iardate2" required>
+                            <input type="date" name="$Flight Arrival Date" id="iardate2" required>
                         </div>
                         <div class="deptime2">
                             <label for="ideptm2">Departure Time</label><br>
-                            <input type="time" name="Departure Time" id="ideptm2" required>
+                            <input type="time" name="$Flight Departure Time" id="ideptm2" required>
                        </div>
                         <div class="arvtime2">
                             <label for="iarvtime2">To</label><br>
-                            <input type="time" name="Arrival Time" id="iarvtime2" required>
+                            <input type="time" name="$Flight Arrival Time" id="iarvtime2" required>
                         </div>
                     </div>
                 </fieldset>
@@ -383,7 +392,7 @@
                 <fieldset class="opcao">
                     <div class="quest">
                         <label for="ititulo">Title:</label><br>
-                        <select name="Title" id="ititulo">
+                        <select name="$Title" id="ititulo">
                             <option value="">Select...</option>
                             <option>Mrs.</option>
                             <option>Mr.</option>
@@ -393,19 +402,19 @@
                     </div>
                     <div class="quest">
                         <label for="inome2">Name:</label><br>
-                        <input type="text" name="Name" id="inome2" placeholder="Name" autocomplete="name" minlength="3" maxlength="30">
+                        <input type="text" name="$Name" id="inome2" placeholder="Name" autocomplete="name" minlength="3" maxlength="30">
                     </div>
                     <div class="quest">
                         <label for="isurnome2">Surname:</label><br>
-                        <input type="text" name="Surname" id="isurnome2" placeholder="Surname" autocomplete="name" minlength="3" maxlength="30">
+                        <input type="text" name="$Surname" id="isurnome2" placeholder="Surname" autocomplete="name" minlength="3" maxlength="30">
                     </div>
                     <div class="quest">
                         <label for="imail2">Email:</label><br>
-                        <input type="email" name="Email" id="imail2" autocomplete="email" placeholder="Email">
+                        <input type="email" name="$Email" id="imail2" autocomplete="email" placeholder="Email">
                     </div>
                     <div class="quest">
                         <label for="inac2">Nationality:</label><br>
-                        <select name="Nationality" id="inac2">
+                        <select name="$Nationality" id="inac2">
                             <option value="">Select...</option>
                                 <option>Afeganistão</option>
                                 <option>Albânia</option>
@@ -625,11 +634,11 @@
                     </div>
                     <div class="quest">
                         <label for="ibirth2">Birth Date:</label><br>
-                        <input type="date" name="Birth Date" id="ibirth2">
+                        <input type="date" name="$Birth Date" id="ibirth2">
                     </div>
                     <div class="quest">
                         <label for="idoc2">Document Type:</label><br>
-                        <select name="Document Type" id="idoc2">
+                        <select name="$Document Type" id="idoc2">
                             <option value="">Select...</option>
                             <option>Passport</option>
                             <option>Citizen Card</option>
@@ -637,18 +646,16 @@
                     </div>
                     <div class="quest">
                         <label for="inumber2">Identification Number:</label><br>
-                        <input type="number" name="Identification Number" id="inumber2" minlength="7" maxlength="20" placeholder="Card Number">
+                        <input type="text" name="$Identification Number" id="inumber2" minlength="7" maxlength="20" placeholder="Card Number">
                     </div>
-                  
-                    
                     <div class="quest">
-                        <label for="iexpdate2">Expiration Date:</label><br>
-                        <input type="date" name="Expiration Date" id="iexpdate2">
+                        <label for="iexpdate">Expiration Date:</label><br>
+                        <input type="date" name="$Expiration Date" id="iexpdate">
                     </div>
                 </fieldset>
                 <div class="botaolimpa">
                     <label for="clearFormButton"></label><br>
-                    <input type="button" id="clearFormButton" value="REMOVE TRAVEL COMPANY" placeholder="REMOVE TRAVEL COMPANY">
+                    <input type="button" id="clearFormButton" value="REMOVE TRAVEL companion" placeholder="REMOVE TRAVEL COMPANION">
                 </div>
             </div>
 
@@ -660,34 +667,34 @@
                 <input type="button" id="insButton" value="ADD TRANSFER BOOKING" placeholder="ADD TRANSFER BOOKING">
             </div>
           <fieldset id="bookingContainer"></fieldset>
-                        <div class="booking">
+                <div class="booking">
+				<input type="hidden" name="$Hotel Booking" value="----------------------------------">
                     <div class="quest">
                         <label for="ifrom">From:</label><br>
-                        <input type="text" name="From" id="ifrom" placeholder="Airport Name, City, Hotel, Location." autocomplete="country-name">
+                        <input type="text" name="$Transfer From" id="ifrom" placeholder="Airport Name, City, Hotel, Location." autocomplete="country-name">
                     </div>
                     <div class="quest">
                         <label for="ifax">Pax number:</label><br>
-                    <input type="tel" name="Pax Number" id="ifax" autocomplete="fax" placeholder="Pax Number">
+                    <input type="tel" name="$Transfer Pax Number" id="ifax" autocomplete="fax" placeholder="Pax Number">
                      </div>
                     <div class="quest">
                         <label for="idtservice">Date:</label><br>
-                        <input type="date" name="Date" id="idtservice" placeholder="Service Date"> 
+                        <input type="date" name="$Transfer Date" id="idtservice" placeholder="Service Date"> 
                     </div>
                     <div class="quest">
                         <label for="idest">To:</label><br>
-                        <input type="text" name="To" id="idest" placeholder="Destination Name" autocomplete="country-name">
+                        <input type="text" name="$Transfer To" id="idest" placeholder="Destination Name" autocomplete="country-name">
                     </div>
                     <div class="quest">
                         <label for="isvtime">Time:</label><br>
-                        <input type="time" name="Time" id="isvtime" autocomplete="on" placeholder="Service Time">
+                        <input type="time" name="$Transfer Time" id="isvtime" autocomplete="on" placeholder="Service Time">
                      </div>
                 </div>
-         
-
-               <div id="HotelbookingContainer"></div>
+                <div id="HotelbookingContainer"></div>
                 <h2>Hotel Booking</h2>
+				 <input type="hidden" name="$Hotel Booking" value="----------------------------------">
                        <table>
-                        <div id="Booking">
+                        <div id="Booking
                           <div class="tabela">
                               <tr>
                                     <th scope="col">Qtd</th>
@@ -699,7 +706,7 @@
                                 <tr>
                                     <td>
                                         <label for="iqt"></label>
-                                        <select name="Qtd" id="iqt">
+                                        <select name="$Qtd" id="iqt">
                                         <option>0</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -707,14 +714,14 @@
                                     </td>
                                     <td>
                                         <label for="itproom"></label>
-                                        <select name="Room Type" id="itproom">
+                                        <select name="$Room Type" id="itproom">
                                         <option>Single Room BB</option>
                                         <option>Double Room BB</option>
                                         </select>
                                     </td>
                                     <td>
                                         <label for="iqtad"></label>
-                                        <select name="Nº.Adults" id="iqtad">
+                                        <select name="$Nº.Adults" id="iqtad">
                                         <option>0</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -722,7 +729,7 @@
                                     </td>
                                     <td>
                                         <label for="iqcri"></label>
-                                        <select name="Nº. Childs" id="iqcri">
+                                        <select name="$Nº. Childs" id="iqcri">
                                         <option>0</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -730,16 +737,16 @@
                                     </td>
                                     <td>
                                         <label for="iage"></label>
-                                        <input type="number" name="Age Child 1" id="iage">
+                                        <input type="number" name="$Age Child 1" id="iage">
                                     </td>
                                     <td>
                                         <label for="iage2"></label>
-                                        <input type="number" name="Age Child 2" id="iage2">
+                                        <input type="number" name="$Age Child 2" id="iage2">
                                     </td>
                                     <tr>
                                         <td>
                                             <label for="iqt"></label>
-                                            <select name="Qt" id="iqt">
+                                            <select name="$Qtd" id="iqt">
                                             <option>0</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -748,14 +755,14 @@
                                         </td>
                                         <td>
                                             <label for="itproom"></label>
-                                            <select name="Room Type" id="itproom">
+                                            <select name="$Room Type" id="itproom">
                                             <option>Single Room BB</option>
                                             <option>Double Room BB</option>
                                             </select>
                                         </td>
                                         <td>
                                             <label for="iqtad"></label>
-                                            <select name="Nº.Adults" id="iqtad">
+                                            <select name="$Nº.Adults" id="iqtad">
                                             <option>0</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -763,7 +770,7 @@
                                         </td>
                                         <td>
                                             <label for="iqcri"></label>
-                                            <select name="Nº. Childs" id="iqcri">
+                                            <select name="$Nº. Childs" id="iqcri">
                                             <option>0</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -771,11 +778,11 @@
                                         </td>
                                         <td>
                                             <label for="iage"></label>
-                                            <input type="number" name="Age Child 1" id="iage">
+                                            <input type="number" name="$Age Child 1" id="iage">
                                         </td>
                                         <td>
                                             <label for="iage2"></label>
-                                            <input type="number" name="Age Child 2" id="iage2">
+                                            <input type="number" name="$Age Child 2" id="iage2">
                                         </td>
                                     </tr>
                           </div>
@@ -786,9 +793,10 @@
             <h3>Please Select Hotel dates</h3><br>
             <!--<fieldset>-->
             <div class="hoteldatas">
+                <input type="hidden" name="Datas de Reserva" value="----------------------------------">
                 <div class="datahotel">
                     <label for="istart">Start Date:</label><br>
-                    <select id="istart" name="Date Select">
+                    <select id="istart" name="$Start Date">
                         <option value="2024-09-11">2024-09-11</option>
                         <option value="2024-09-12">2024-09-12</option>
                         <option value="2024-09-13">2024-09-13</option>
@@ -797,7 +805,7 @@
                 </div>
                 <div class="datahotel">
                     <label for="ifimest">End Date:</label><br>
-                    <select id="ifimest" name="End Date">
+                    <select id="ifimest" name="$End Date">
                         <option value="2024-09-11">2024-09-11</option>
                         <option value="2024-09-12">2024-09-12</option>
                         <option value="2024-09-13">2024-09-13</option>
@@ -811,7 +819,7 @@
             <h2>Aditional Requests</h2><br>
             <div class="adicional">
                 <label for="imsg"></label>
-                <textarea name="msg" id="imsg"></textarea>
+                <textarea name="$Aditional Requests" id="imsg"></textarea>
             </div>
             <br>
             <h3>All personal expenses are the responsibility of the participants.</h3>
@@ -904,7 +912,7 @@
         </div>
     </div>
     <div class="rodape">
-        <p>Copyright 2024 por <strong><a href="atlantidawtaviagens.com">Atlântida WTA Viagens</a></strong></p>
+        <p>Copyright 2024 por <strong><a href="https://www.atlantidawtaviagens.com">Atlântida WTA Viagens</a></strong></p>
     </div>
 </footer>
 
@@ -931,7 +939,7 @@
             document.getElementById('inumber2').value = '';
             document.getElementById('ibirth2').value = '';
             document.getElementById('imail2').value = '';
-            document.getElementById('iexpdate2').value = '';
+            document.getElementById('iexpdate').value = '';
         });
 
         document.getElementById('ichega').addEventListener('change', function() {
@@ -956,23 +964,23 @@
                     <legend>Booking ${bookingCount}</legend>
                     <div class="quest">
                         <label for="ifrom${bookingCount}">From:</label><br>
-                        <input type="text" name="from${bookingCount}" id="ifrom${bookingCount}" placeholder="Airport Name, City, Hotel, Location." autocomplete="country-name">
+                        <input type="text" name="$Transfer From" id="ifrom${bookingCount}" placeholder="Airport Name, City, Hotel, Location." autocomplete="country-name">
                     </div>
                     <div class="quest">
                         <label for="ipax${bookingCount}">Pax number:</label><br>
-                        <input type="tel" name="pax${bookingCount}" id="ipax${bookingCount}" autocomplete="pax" placeholder="Pax Number">
+                        <input type="tel" name="$Transfer Pax Number" id="ipax${bookingCount}" autocomplete="pax" placeholder="Pax Number">
                     </div>
                     <div class="quest">
                         <label for="idtservice${bookingCount}">Date:</label><br>
-                        <input type="date" name="dtservice${bookingCount}" id="idtservice${bookingCount}" placeholder="Service Date">
+                        <input type="date" name="$Transfer Date" id="idtservice${bookingCount}" placeholder="Service Date">
                     </div>
                     <div class="quest">
                         <label for="idest${bookingCount}">To:</label><br>
-                        <input type="text" name="dest${bookingCount}" id="idest${bookingCount}" placeholder="Destination Name" autocomplete="country-name">
+                        <input type="text" name="$Transfer To" id="idest${bookingCount}" placeholder="Destination Name" autocomplete="country-name">
                     </div>
                     <div class="quest">
                         <label for="isvtime${bookingCount}">Time:</label><br>
-                        <input type="time" name="svtime${bookingCount}" id="isvtime${bookingCount}" autocomplete="on" placeholder="Service Time">
+                        <input type="time" name="$Transfer Time" id="isvtime${bookingCount}" autocomplete="on" placeholder="Service Time">
                     </div>
                     <div class="botaolimpa2">
                         <label for="clearFormButton2-${bookingCount}"></label><br>

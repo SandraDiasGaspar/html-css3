@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Atlantida</title>
+    <link rel="stylesheet" href="formnov.css">
+    <style>
+        header {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        header img {
+            width: 100%;
+        }
+        main {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-width: 1050px;
+        }
+        form {
+            padding-top: 0;
+            width: 100%;
+        }
+
+        form {
+            padding-top: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+    .table-responsive .table thead {
+        display: none;
+    }
+
+    .table-responsive .table tbody,
+    .table-responsive .table tr,
+    .table-responsive .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-responsive .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table-responsive .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table-responsive .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+        
+
+
+    </style>
+</head>
+   
+<body>
+    <main class="container">
+    <header>
+        <img src="imagens/head.png" alt="logo thinling football">
+    </header>
+    <form action="" method="post" autocomplete="on">
+        <h2>Flights</h2>
+        <fieldset>
+            <div class="flights">
+                <div>
+                    <label for="ifrom">From</label>
+                    <input type="text" name="$From" id="ifrom" autocomplete="on" placeholder="City, Airport">
+                </div>
+                <div>
+                    <label for="idepdate">Departure Date</label>
+                    <input type="date" name="$Departure Date" id="idepdate" autocomplete="on" placeholder="0">
+                </div>
+                <div>
+                    <label for="iflyghttype">Flyght Type</label>
+                    <select name="$Flyght Type" id="iflyghttype">
+                            <option>Round Trip</option>
+                            <option>One Way</option>
+                        </select>
+                </div>
+                <div>
+                    <label for="idestination">Destination</label>
+                    <input type="text" name="$Destination" id="idestination" autocomplete="on" placeholder="Porto, Francisco Sá Carneiro">
+                </div>
+                <div>
+                    <label for="ireturndt">Return Date</label>
+                    <input type="date" name="$Return Date" id="ireturndt" autocomplete="on" placeholder="0">
+                </div>
+                <div>
+                    <label for="iadults">Adults</label>
+                    <select name="$Adults" id="iadults">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ichils">Childs > 2 Years</label>
+                    <select name="$Childs" id="ichilds">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ibabies">Babies</label>
+                    <select name="$Babies" id="ibabies">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="botao">
+                        <button type="submit" class="botao">SEARCH</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <h2>Hotels</h2>
+        <fieldset>
+            <div class="hotels">
+            </div>
+
+        </fieldset>
+        <h3>Transfers</h3>
+        <fieldset>
+            <div class="transfers">
+                <div>
+                    <label for="iservfrom">Service From</label>
+                    <select name="$Service From" id="iservfrom">
+                        <option value="">Porto Airport</option>
+                        <option value="">Thinking Football 2024</option>
+                        <option value="">Porto Palácio</option>
+                        <option value="">Editory Boulevard Aliados</option>
+                        <option value="">Editory House Ribeira</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="iservdate">Service Date</label>
+                    <input type="date" name="$Service Date" id="iservdate">
+                </div>
+                <div>
+                    <label for="iservtime">Service Time</label>
+                    <input type="time" name="$Service Time" id="iservtime" placeholder="Service Time">
+                </div>
+                <div>
+                    <label for="ipaxnumb">Babies</label>
+                    <select name="$Pax Number" id="ipaxnumb">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ito">Service From</label>
+                    <select name="$To" id="ito">
+                        <option value="">Porto Palácio</option>
+                        <option value="">Editory Boulevard Aliados</option>
+                        <option value="">Editory House Ribeira</option>
+                        <option value="">Thinking Football 2024</option>
+                        <option value="">Porto Aeroporto</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="botao2">
+                        <button type="submit" class="botao2">SAVE TRANSFER</button>
+                    </div>
+                </div>
+                <H2>Sub-Total xxx€</H2>
+                <div>
+                <div class="botao3">
+                     <button type="submit" class="botao3">BUY NOW</button>
+                </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <div class="botao3">
+                    <a href="http://segpag1507.html">BUY NOW</a>
+                </div>
+            </div>
+
+
+
+
+
+        </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+</main>
+</body>
+</html>

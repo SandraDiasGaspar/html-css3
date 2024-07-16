@@ -1,13 +1,4 @@
-@charset "UTF-8";
-
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    box-sizing: border-box;
-}
-
-body{
+body {
     background-color: white;
     text-align: center;
     justify-content: center;
@@ -18,7 +9,8 @@ body{
     padding: 0;
     width: 100%;
 }
-main{
+
+main {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -26,80 +18,59 @@ main{
     max-width: 1050px;
 }
 
-header{
+header {
     background-color: black;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
-    max-width: 1050px;
-    margin: 0px auto;
+    margin-bottom: 0;
     padding: 20px;
-    box-sizing: border-box;
+    border-collapse: collapse;
 }
+
 header img {
     max-width: 100%;
-    height: auto;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
-form{
-    display: inline-block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+form {
     background-color: black;
     color: white;
-    width: 100%;
     padding: 20px;
-    margin: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
 }
 
-fieldset{
-    font-size: 1em;
-    columns:3;
+fieldset {
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
     border-radius: 10px;
     margin-bottom: 20px;
-    max-width: 1050px;
     padding: 10px;
-    width: 100%;
 }
 
-.quest{
-    flex-direction: column;
-    margin-bottom: 10px;
+.quest label {
+    margin-bottom: 5px;
 }
 
-.quest > input {
-    border: none;
-    outline: none;
-    padding: 5px;
-    margin: 0;
-    width: 100%;
-}
-
-.quest > select {
-    border: none;
-    outline: none;
-    padding: 5px;
-    margin: 0;
-    width: 100%;
-}
-
+.quest > input,
+.quest > select,
 .quest > textarea {
     border: none;
     outline: none;
     padding: 5px;
-    margin: 0;
     width: 100%;
 }
 
-.quest > input:focus, .quest > select:focus, .quest > textarea:focus {
+.quest > input:focus,
+.quest > select:focus,
+.quest > textarea:focus {
     border: 1px solid rgb(19, 204, 120);
 }
 
-.botao button{
+.botao button {
     color: white;
     background-color: rgb(19, 204, 120);
     padding: 10px 20px;
@@ -107,16 +78,13 @@ fieldset{
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-    box-sizing: border-box;
 }
 
-.botao button:hover{
+.botao button:hover {
     background-color: #FA7D0B;
 }
 
-.botao{
+.botao {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -128,7 +96,8 @@ fieldset{
     padding: 0px;
 }
 
-/*.hoteldatas, */.booking2 {
+.hoteldatas,
+.booking2 {
     display: flex;
     flex-wrap: wrap;
     font-size: 13px;
@@ -148,7 +117,7 @@ fieldset{
     margin-bottom: 10px;
 }
 
-fieldset.booking{
+fieldset.booking {
     border: none;
 }
 
@@ -182,42 +151,41 @@ fieldset.booking{
     }
 }
 
-h2{
+h2 {
     font-size: 20px;
     font-weight: bold;
     color: rgb(19, 204, 120);
 }
 
-h4{
+h4 {
     font-size: 16px;
     font-weight: bold;
     color: rgb(19, 204, 120);
     padding: 5px;
 }
 
-h3{
+h3 {
     font-size: 18px;
     font-weight: bold;
     color: rgb(19, 204, 120);
 }
 
-p{
+p {
     font-size: 16px;
     font-weight: bold;
     color: rgb(19, 204, 120);
 }
 
-input{
+input {
     padding: 5px;
     border: 5px;
     width: 200px;
     border-radius: 20px;
     color: rgb(128, 116, 116);
     font-size: 1em;
-        
 }
 
-label{
+label {
     padding: 5px;
     border: 5px;
     width: 200px;
@@ -226,10 +194,10 @@ label{
     font-size: 1em;
 }
 
-select{
+select {
     padding: 5px;
     border: 5px;
-    width: 200px;
+    width: 100%;
     border-radius: 20px;
     color: rgb(128, 116, 116);
     font-size: 1em;
@@ -243,30 +211,30 @@ table {
     width: 100%;
 }
 
-th, td{
+th,
+td {
     text-align: center;
     border: 1px solid black;
     padding: 10px;
 }
 
-th{
+th {
     background-color: rgb(25, 255, 146);
     color: rgb(63, 60, 60);
     font-weight: normal;
 }
 
-
-.adicional{
+.adicional {
     background-color: black;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    background-color: black; 
+    background-color: black;
     color: rgb(19, 204, 120);
     padding: 10px;
 }
 
-.opcao{
+.opcao {
     font-size: 1em;
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
@@ -274,33 +242,23 @@ th{
     margin-bottom: 20px;
 }
 
-div.tabela{
+div.tabela {
     width: 100%;
     padding: 0px 5px 5px 5px;
 }
 
-#iqt{
-    width: 100%;
-}
-#itproom{
-    width: 100%;
-}
-#iqtad{
-    width: 100%;
-}
-#iqcri{
-    width: 100%;
-}
-#iage{
-    width: 100%;
-}
-#iage2{
+#iqt,
+#itproom,
+#iqtad,
+#iqcri,
+#iage,
+#iage2 {
     width: 100%;
 }
 
-.hoteldatas{
+.hoteldatas {
     font-size: 1em;
-    columns:2;
+    columns: 2;
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
     border-radius: 10px;
@@ -309,7 +267,14 @@ div.tabela{
     justify-content: space-between;
 }
 
-#iaddCompanionButton{
+.row.hoteldatas.mb-4 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+#iaddCompanionButton {
     background-color: rgb(25, 255, 146);
     color: black;
     padding: 10px 30px;
@@ -322,26 +287,21 @@ div.tabela{
     box-sizing: border-box;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
-        }
+}
 
 #iaddCompanionButton:hover {
-        background-color: #FA7D0B;
- }
-    
+    background-color: #FA7D0B;
+}
+
 @media (max-width: 768px) {
-        #iaddCompanionButton {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-        }
+    #iaddCompanionButton {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
 }
 
-#clearFormButton{
-    background-color: rgb(25, 255, 146);
-    color: black;
-}
-
-#clearFormButton{
+#clearFormButton {
     background-color: rgb(25, 255, 146);
     color: black;
     padding: 10px 30px;
@@ -354,28 +314,27 @@ div.tabela{
     box-sizing: border-box;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
-        }
+}
 
-    
 @media (max-width: 768px) {
-        #clearFormButton {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-        }
+    #clearFormButton {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
 }
 
 
-
-.adicional{
+.adicional {
     background-color: black;
 }
-#adicional label{
+
+#adicional label {
     margin-bottom: 5px;
     font-weight: bolder;
 }
 
-#adicional textarea{
+#adicional textarea {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -383,31 +342,44 @@ div.tabela{
     box-sizing: border-box;
     resize: vertical;
 }
+/*.btn-danger.mt-3 {
+    background-color: rgb(19, 204, 120);
+    color: black; 
+    border: none;
+}
 
+.btn-danger.mt-3:hover {
+    background-color: #FA7D0B; 
+}*/
 
-#imsg{
+#imsg {
     width: 100%;
     height: 150px;
     border-radius: 20px;
     padding: 10px;
 }
 
-#insButton{
+#insButton {
     background-color: rgb(25, 255, 146);
     color: black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin-bottom: 10px;
 }
 
-#insButton:hover{
+#insButton:hover {
     background-color: #FA7D0B;
 }
 
+.btn:hover {
+    background-color: #FA7D0B;
+}
 
-
-#insButton{
+.btn {
     background-color: rgb(25, 255, 146);
     color: black;
     padding: 10px 30px;
-    font-size: 1em;
+    font-size: 14px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -416,88 +388,18 @@ div.tabela{
     box-sizing: border-box;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
-  /*  margin-left: 25%;*/
-        }
-
-#insButton:hover {
-        background-color: #FA7D0B;
- }
-    
-@media (max-width: 768px) {
-        #insButton {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-        }
 }
 
-.btn:hover{
-    background-color: #FA7D0B;
-}
-
-.btn{
-background-color: rgb(25, 255, 146);
-color: black;
-padding: 10px 30px;
-font-size:14px;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-width: auto;
-max-width: 100%;
-box-sizing: border-box;
-transition: background-color 0.3s ease;
-margin-bottom: 10px;
-/*  margin-left: 25%;*/
-    }
-
 @media (max-width: 768px) {
-    #btn {
+    .btn {
         width: 100%;
         padding: 10px;
         font-size: 14px;
     }
 }
-#iaddCompanionButton:hover{
-    background-color: #FA7D0B;
-}
 
-#clearFormButton:hover{
-    background-color: #FA7D0B;
-}
-
-@media (max-width: 768px) {
-    .tabela {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tabela tr {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-
-    .tabela th, .tabela td {
-        text-align: left;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .adicional {
-        padding: 10px;
-    }
-
-    .adicional textarea {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .botao button {
-        width: 100%; 
-    }
+header.mb-4 {
+    margin: 0px;
 }
 
 footer {
@@ -515,6 +417,8 @@ footer .footer-container {
     justify-content: space-between;
     max-width: 1050px;
     margin: auto;
+    text-align: center;
+    color: white;
 }
 
 footer .coluna {
@@ -525,7 +429,6 @@ footer .coluna {
 footer .logofim img {
     max-width: 100%;
     height: auto;
-    
 }
 
 footer .contactos p,
@@ -545,11 +448,11 @@ footer .informacoesfim a {
     color: #d71921;
 }
 
-footer .contactos p{
-    font-size: 12px;
+footer .contactos p {
+    font-size: 14px;
 }
 
-footer a{
+footer a {
     font-size: 14px;
 }
 
@@ -577,30 +480,36 @@ footer .redes nav a {
     }
 }
 
-.footer-container h3{
+.footer-container h3 {
     color: black;
     font-size: 16px;
     text-align: justify;
 }
 
-.rodape p{
+.rodape p {
     color: black;
 }
 
-.rodape a{
+.rodape a {
     color: #d71921;
     text-decoration: none;
 }
-.rodape a:hover{
+
+.rodape a:hover {
     text-decoration: underline;
 }
 
+.mail img {
+    margin-right: 10px;
+}
 
+.rodape {
+    margin-top: 20px;
+    font-size: 14px;
+}
 
-
-
-
-#success-message, #error-message {
+#success-message,
+#error-message {
     margin-top: 20px;
     font-weight: bold;
 }
@@ -613,4 +522,8 @@ footer .redes nav a {
     color: red;
 }
 
-
+@media (max-width: 768px) {
+    .quest {
+        flex: 1 1 100%;
+    }
+}

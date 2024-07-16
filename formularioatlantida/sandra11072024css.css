@@ -30,19 +30,24 @@ header{
     background-color: black;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
-    max-width: 1050px;
-    margin: 0px auto;
+    /*margin-bottom: 20px;*/
+    /*max-width: 1050px;*/
+    margin-bottom: 0;
     padding: 20px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+    border-collapse: collapse;
 }
 header img {
     max-width: 100%;
-    height: auto;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    /*height: auto;*/
 }
 
 form{
-    display: inline-block;
+ /*   display: inline-block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -51,11 +56,17 @@ form{
     color: white;
     width: 100%;
     padding: 20px;
-    margin: auto;
+    margin: 0 auto;*/
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    
 }
 
 fieldset{
-    font-size: 1em;
+   /* font-size: 1em;
     columns:3;
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
@@ -63,19 +74,28 @@ fieldset{
     margin-bottom: 20px;
     max-width: 1050px;
     padding: 10px;
-    width: 100%;
+    width: 100%;*/
+    color: rgb(19, 204, 120);
+    border: 1px solid rgb(19, 204, 120);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
-.quest{
+/*.quest{
     flex-direction: column;
     margin-bottom: 10px;
+}*/
+
+.quest label {
+    margin-bottom: 5px;
 }
 
 .quest > input {
     border: none;
     outline: none;
     padding: 5px;
-    margin: 0;
+    /*margin: 0;*/
     width: 100%;
 }
 
@@ -83,7 +103,7 @@ fieldset{
     border: none;
     outline: none;
     padding: 5px;
-    margin: 0;
+    /*margin: 0;*/
     width: 100%;
 }
 
@@ -91,7 +111,7 @@ fieldset{
     border: none;
     outline: none;
     padding: 5px;
-    margin: 0;
+    /*margin: 0;*/
     width: 100%;
 }
 
@@ -100,7 +120,7 @@ fieldset{
 }
 
 .botao button{
-    color: white;
+  /*  color: white;
     background-color: rgb(19, 204, 120);
     padding: 10px 20px;
     font-size: 16px;
@@ -109,7 +129,14 @@ fieldset{
     cursor: pointer;
     width: 100%;
     max-width: 300px;
-    box-sizing: border-box;
+    box-sizing: border-box;*/
+    color: white;
+    background-color: rgb(19, 204, 120);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .botao button:hover{
@@ -500,6 +527,10 @@ margin-bottom: 10px;
     }
 }
 
+header.mb-4{
+    margin: 0px;
+}
+
 footer {
     background-color: white;
     color: black;
@@ -515,6 +546,8 @@ footer .footer-container {
     justify-content: space-between;
     max-width: 1050px;
     margin: auto;
+    text-align: center;
+    color: white;
 }
 
 footer .coluna {
@@ -546,7 +579,7 @@ footer .informacoesfim a {
 }
 
 footer .contactos p{
-    font-size: 12px;
+    font-size: 14px;
 }
 
 footer a{
@@ -594,9 +627,14 @@ footer .redes nav a {
 .rodape a:hover{
     text-decoration: underline;
 }
+.mail img {
+    margin-right: 10px;
+}
 
-
-
+.rodape {
+    margin-top: 20px;
+    font-size: 14px;
+}
 
 
 
@@ -612,5 +650,9 @@ footer .redes nav a {
 #error-message {
     color: red;
 }
-
+@media (max-width: 768px) {
+    .quest {
+        flex: 1 1 100%;
+    }
+}
 

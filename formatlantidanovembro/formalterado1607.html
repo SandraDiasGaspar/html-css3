@@ -4,130 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Atlantida</title>
-    <link rel="stylesheet" href="formnov.css">
+    <link rel="stylesheet" href="estilocssalterado1607.css">
     <style>
         header {
             width: 100%;
             margin-bottom: 0;
         }
-
         header img {
             width: 100%;
         }
-
         main {
             padding: 0;
-            margin: 0 auto;
+            margin: 0;
             width: 100%;
             max-width: 1050px;
-            box-sizing: border-box;
         }
-
         form {
             padding-top: 0;
             width: 100%;
-            box-sizing: border-box;
         }
-
         .nav-links {
             display: flex;
             justify-content: space-around;
+            /*margin-bottom: 20px;*/
             background-color: black;
             margin: 0;
             padding: 0;
-            flex-wrap: wrap; /* Adicionado para responsividade */
         }
-
         .nav-links a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px; /* Ajustado para responsividade */
+            padding: 10px 80px;
             background-color: rgb(19, 204, 120);
             border-radius: 10px;
-            font-size: 16px; /* Reduzido para responsividade */
+            font-size: 20px;
             font-weight: bolder;
             border: none;
             box-shadow: none;
-            margin: 5px; /* Adicionado espaço entre os botões */
         }
-
         .nav-links a:hover {
             background-color: #FA7D0B;
         }
-
+       /* .section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .section div {
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .section .full-width {
+            flex: 1 1 100%;
+        }*/
         .botao, .botao2, .botao3 {
             text-align: center;
             padding: 20px;
             margin: 0;
         }
-
-        .section-content {
-            display: none;
-            margin: 0;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-            background-color: transparent;
+      /*  .botao2{
+            padding: 20px;
         }
-
-        .section-content.active {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .section-content > div {
-            flex: 1 1 calc(33.333% - 10px);
-            box-sizing: border-box;
-            margin: 5px;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-        }
-
-        .section-content::before,
-        .section-content::after {
-            content: none;
-        }
-
-        .section-content input,
-        .section-content select,
-        .section-content button {
-            margin: 0;
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
-            outline: none;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .full-width {
-            flex: 1 1 100%;
-        }
-
-        .full-width,
-        .botao3 {
-            margin: 0;
-            padding: 0;
-        }
-
-        .full-width:before,
-        .full-width:after,
-        .botao3:before,
-        .botao3:after {
-            content: none;
-        }
-
-        @media (max-width: 768px) {
-            .section-content > div {
+        /*.botao3{
+            padding: 20px;
+            
+        }*/
+    /*    @media (max-width: 768px) {
+            .section div {
                 flex: 1 1 100%;
             }
-
-            .nav-links {
-                flex-direction: column; /* Coloca os links em coluna para dispositivos pequenos */
-            }
-        }
+        }*/
     </style>
 </head>
 <body>
@@ -270,6 +216,7 @@
                 
 
 
+
             </div>
                 
                 <a href="http://segpag1507.html">BUY NOW</a>
@@ -377,13 +324,27 @@
         showSection('sectionTickets');
     });
     
-    function showSection(sectionId) {
+    /*function showSection(sectionId) {
+        document.getElementById('sectionFlights').style.display = 'none';
+        document.getElementById('sectionHotels').style.display = 'none';
+        document.getElementById('sectionTransfers').style.display = 'none';
+        document.getElementById('sectionTickets').style.display = 'none';
+    
+        document.getElementById(sectionId).style.display = 'block';
+    }*/
+
+     function showSection(sectionId) {
+        // Oculta todas as seções
         document.querySelectorAll('.section-content').forEach(function(section) {
             section.classList.remove('active');
         });
+    
+        // Mostra a seção selecionada
         document.getElementById(sectionId).classList.add('active');
     }
-</script>
+
+
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de pagamento</title>
+    <link rel="stylesheet" href="estilocssalterado1607.css">
+    <style>
+      
+        main {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-width: 1050px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        form {
+            padding-top: 0;
+            width: 100%;
+        }
+        .form-content {
+        flex: 1;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 80px;
+            background-color: rgb(19, 204, 120);
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .nav-links a:hover {
+            background-color: #FA7D0B;
+        }
+        .botao, .botao2, .botao3 {
+            text-align: center;
+            padding: 20px;
+            margin: 0px 0px 0px 0px;
+        }
+        .botao2 {
+            padding: 20px;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .section-content > div {
+            flex: 1 1 calc(33.333% - 10px);
+            box-sizing: border-box;
+            margin: 5px;
+        }
+        @media (max-width: 768px) {
+            .section-content > div {
+                flex: 1 1 100%;
+            }
+        }
+        main a{
+            color: white;
+            text-decoration: none;
+            padding: 10px 80px;
+            background-color: rgb(19, 204, 120);
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bolder;
+            text-align: left;
+         }
+        h1{
+            font-size: 20px;
+            text-align: left;
+            padding: 10px;
+            color: rgb(19, 204, 120);
+        }
+        h2{
+            font-size: 16px;
+            text-align: left;
+            padding: 10px;
+            color: rgb(19, 204, 120);
+        }
+        hr{
+            border: 0;
+            height: 1px;
+            background: white;
+            margin: 5px;
+        }
+        .section-content label{
+            padding: 10px;
+            color: rgb(19, 204, 120);    
+            text-align: left;             
+        }
+
+        .section-content input{
+            border-radius: 20px;             
+        }
+        select{
+            padding: 10px;
+            width: 50%;
+            margin: 0px;
+            align-items: left;
+            text-align: left;
+        }
+            /*.pagamento, */.extra-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .extra-buttons button {
+            background-color: rgb(19, 204, 120);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .extra-buttons button:hover {
+            background-color: #FA7D0B;
+        }
+        .pagamento-container {
+         display: flex;
+        justify-content: space-between;
+         margin-bottom: 20px;
+        }
+
+        .pagamento a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: rgb(19, 204, 120);
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+        .pagamento a:hover {
+            background-color: #FA7D0B;
+        }
+
+        a{
+            width: 350px;
+        }
+         
+        .imgpag img{
+            width: 400px;
+            text-align: right;
+       }
+
+    </style>
+</head>
+<body>
+    <main>
+    <!--    <div class="main-container">-->
+            <div class="sidebar">
+                <div class="button-container">
+                    <button id="linkTransfers" onclick="showSection('sectionTransfers')">Add Transfer</button>
+                </div>
+                <div class="button-container">
+                    <button id="linkTickets" onclick="showSection('sectionTickets')">Buy Ticket</button>
+                </div>
+                <div class="button-container">
+                    <button id="linkHotels" onclick="showSection('sectionHotels')">Add Hotel</button>
+                </div>
+            </div>
+        <div class="form-content">
+            <br>
+        <div style="text-align: left;">
+            <a href="http://formalterado1607.html" target="_blank" rel="noopener noreferrer">BACK</a>
+        </div>
+        <br>
+        <h1>01 Passenger Data</h1>
+        <hr>
+        <div class="dados section-content">
+            <div>
+                <label for="iname">Name</label>
+                <input type="text" name="$Name" id="iname" placeholder="Name">
+            </div>
+            <div>
+                <label for="isurname">Surname</label>
+                <input type="text" name="$Surname" id="isurname" placeholder="Surname">
+            </div>
+            <div>
+                <label for="iemail">Email</label>
+                <input type="email" name="$Email" id="iemail" placeholder="email">
+            </div>
+        </div>
+        <h1>02 Terms & Conditions</h1>
+        <hr>
+        <h2>Cancelation Policies</h2>
+
+        <div class="condicoes">
+            <!-- Conteúdo das políticas de cancelamento -->
+        </div>
+        <h1>03 Payment</h1>
+        <hr>
+        <h2>Select for payment</h2>
+        <div style="text-align: left;">
+            <label for="icard"></label>
+            <select name="$Card" id="icard">
+                <option value="">Credit Card (Visa/American Express/Mastercard)</option>
+                <option value="">Multibanco</option>
+           </select>
+        <br>
+        <br>
+        <div class="imgpag">
+            <img src="imagens/metodospagameot.png">
+        </div>
+        </div>
+        <br>
+        <div class="pagamento-container">
+        <div class="pagamento" >
+              <a href="http://form1507.html">BACK</a>
+        </div>
+        <br>
+        <div class="pagamento" >
+            <a href="#">BOOK & PAY</a>
+        </div>
+        </div>
+          
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="coluna">
+                <div class="logofim">
+                    <img src="imagens/logo atlantida.png" width="200px" alt="Logo Atlântida">
+                </div>
+                <div class="contactos">
+                    <p>Se tiver alguma dúvida, ou pretender<br>solicitar um orçamento, poderá fazê-lo<br>contactando-nos!</p>
+                    <br>
+                    <p>Chamada Gratuita</p>
+                    <p>+351 800 200 215</p>
+                    <p>(Seg - Sex / 09 - 18h)</p><br>
+                    <p>RNAVT nº 2006</p>
+                    <br>
+                    <div class="mail">
+                        <img src="imagens/mail.jpg" width="45px" height="35px" alt="Imagem email">
+                        <br>
+                        <a href="mailto: desporto@atlantidawta.com" target="_blank">desporto@atlantidawta.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="coluna sobrenosfim">
+                <h3>SOBRE NÓS</h3>
+                <br>
+                <ul>
+                    <li><a href="https://atlantidawtaviagens.com/quem-somos/">Quem Somos</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/politica-de-qualidade/">Politica de Qualidade</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/grupos-incentivos/">Grupos & Incentivos</a></li>
+                    <br>
+                    <li><a href="http://www.corporate.atlantidawtaviagens.com/">Viagens de Negócio</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/contactos/">Contactos</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/sustentabilidade/">Sustentabilidade</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="coluna informacoesfim">
+                <h3>INFORMAÇÕES</h3>
+                <br>
+                <ul>
+                    <li><a href="https://atlantidawtaviagens.com/candidaturas/">Candidaturas</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/reclamacoes-e-sugestoes/">Reclamações e Sugestões</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/informacoes-faqs/">Informações & FAQ's</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/condicoes-gerais/">Condições Gerais</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/politica-de-privacidade/">Politica de Privacidade</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/canal-de-denuncias/">Canal de Denúncias</a></li>
+                    <br>
+                    <li><a href="https://atlantidawtaviagens.com/covid-19/">Covid-19</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="coluna redes">
+                <nav>
+                    <a href="https://www.facebook.com/AtlantidaWtaPortugal/" target="_blank">
+                        <img src="imagens/facebook_logo_icon_147291.png" width="30px" alt="Facebook Atlantida">
+                    </a>
+                    <a href="https://twitter.com/atlantidaviagem" target="_blank">
+                        <img src="imagens/TWITTER_icon-icons.com_65536.png" width="30px" alt="Twitter Atlantida">
+                    </a>
+                    <a href="https://www.instagram.com/atlantidawta_viagens/" target="_blank">
+                        <img src="imagens/3721672-instagram_108066.png" width="30px" alt="Instagram Atlantida">
+                    </a>
+                    <a href="https://pt.linkedin.com/company/atl%C3%A2ntida-wta-viagens" target="_blank">
+                        <img src="imagens/LINKEDIN_icon-icons.com_65538.png" width="30px" alt="Linkedin Atlantida">
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="rodape">
+            <p>Copyright 2024 por <strong><a href="https://atlantidawtaviagens.com/">Atlântida WTA Viagens</a></strong></p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            
+            document.querySelectorAll('.section-content').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(sectionId).style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

@@ -20,10 +20,13 @@ body {
 }
 
 .sidebar {
-    background-color: #282828;
+    background-color: #282828; /* Cor do fundo do retângulo */
     padding: 20px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 20px; /* Espaço entre o retângulo e o formulário */
+ /*   display: flex;
+    flex-direction: column;
+    gap: 10px;*/
     width: 200px;
 }
 
@@ -32,13 +35,13 @@ main {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-    max-width: 1050px;
+    max-width: 1050px;*/
     background-color: black;
     color: white;
     padding: 20px;
     border-radius: 10px;
+   
 }
-
 .main-container {
     display: flex;
     flex-direction: row;
@@ -75,6 +78,8 @@ fieldset {
     color: rgb(19, 204, 120);
     border: 1px solid rgb(19, 204, 120);
     border-radius: 10px;
+  /*  margin-bottom: 20px;*/
+    /*padding: 10px;*/
 }
 
 .quest label {
@@ -87,7 +92,6 @@ input {
     padding: 10px;
     width: 100%;
     border-radius: 10px;
-    box-sizing: border-box;
 }
 
 select {
@@ -96,7 +100,6 @@ select {
     padding: 10px;
     width: 100%;
     border-radius: 10px;
-    box-sizing: border-box;
 }
 
 .quest > textarea {
@@ -104,17 +107,14 @@ select {
     outline: none;
     padding: 10px;
     width: 100%;
-    box-sizing: border-box;
 }
 
-.quest > input:focus,
-.quest > select:focus,
-.quest > textarea:focus {
+.quest > input:focus, .quest > select:focus, .quest > textarea:focus {
     border: 1px solid rgb(19, 204, 120);
 }
 
 .button-container {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espaço entre os botões */
 }
 
 button {
@@ -127,7 +127,6 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
-
 .sidebar button {
     background-color: rgb(19, 204, 120);
     color: white;
@@ -147,8 +146,9 @@ button:hover {
     background-color: #FA7D0B;
 }
 
-.botao button,
-.botao2 button {
+
+
+.botao button, .botao2 button/*.botao3 button*/ {
     color: white;
     background-color: rgb(19, 204, 120);
     padding: 10px 90px;
@@ -159,32 +159,30 @@ button:hover {
     margin: 10px 0;
 }
 
-.botao3 button {
+.botao3 button{
     color: white;
     background-color: rgb(19, 204, 120);
-    padding: 10px;
+    padding: 10px ;
     font-size: 16px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    
 }
 
-.botao button:hover,
-.botao2 button:hover,
-.botao3 button:hover {
+.botao button:hover, .botao2 button:hover, .botao3 button:hover {
     background-color: #FA7D0B;
     transition: background-color 0.3s ease;
+
 }
 
-.botao,
-.botao2,
-.botao3 {
+.botao, .botao2, .botao3 {
     text-align: center;
+    /*margin-bottom: 20px;*/
     margin: 0;
 }
 
-.botao,
-.botao3 {
+.botao, .botao3 {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -192,14 +190,17 @@ button:hover {
     border: none;
 }
 
+
+
+
 .nav-links {
     display: flex;
     justify-content: space-around;
+    
     background-color: black;
     border-collapse: collapse;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* Adicionado para responsividade */
 }
 
 .nav-links a {
@@ -210,7 +211,6 @@ button:hover {
     border-radius: 10px;
     border: none;
     box-shadow: none;
-    margin: 5px; /* Adicionado espaço entre os botões */
 }
 
 .nav-links a:hover {
@@ -243,17 +243,17 @@ button:hover {
 
 .section-content::before,
 .section-content::after {
-    content: none;
+    content: none; 
 }
 
 .section-content input,
 .section-content select,
 .section-content button {
-    margin: 0;
+    margin: 0; 
     padding: 10px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
+    border: none; 
+    border-radius: 10px; 
+    outline: none; 
 }
 
 .full-width {
@@ -270,29 +270,11 @@ button:hover {
 .full-width:after,
 .botao3:before,
 .botao3:after {
-    content: none;
+    content: none; 
 }
-
 @media (max-width: 768px) {
     .section-content > div {
         flex: 1 1 100%;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links a {
-        padding: 10px 60px;
-    }
-
-    button,
-    .botao button,
-    .botao2 button,
-    .botao3 button {
-        font-size: 14px;
-        padding: 10px 20px;
     }
 }
 
@@ -323,6 +305,7 @@ footer .coluna {
 footer .logofim img {
     max-width: 100%;
     height: auto;
+    
 }
 
 footer .contactos p,
@@ -342,11 +325,11 @@ footer .informacoesfim a {
     color: #d71921;
 }
 
-footer .contactos p {
+footer .contactos p{
     font-size: 14px;
 }
 
-footer a {
+footer a{
     font-size: 14px;
 }
 
@@ -374,25 +357,23 @@ footer .redes nav a {
     }
 }
 
-.footer-container h3 {
+.footer-container h3{
     color: black;
     font-size: 16px;
     text-align: justify;
 }
 
-.rodape p {
+.rodape p{
     color: black;
 }
 
-.rodape a {
+.rodape a{
     color: #d71921;
     text-decoration: none;
 }
-
-.rodape a:hover {
+.rodape a:hover{
     text-decoration: underline;
 }
-
 .mail img {
     margin-right: 10px;
 }
@@ -401,14 +382,11 @@ footer .redes nav a {
     margin-top: 20px;
     font-size: 14px;
 }
-
-.pagamento,
-.extra-buttons {
+.pagamento, .extra-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .extra-buttons button {
     background-color: rgb(19, 204, 120);
     color: white;
@@ -418,7 +396,6 @@ footer .redes nav a {
     font-size: 14px;
     font-weight: bold;
 }
-
 .extra-buttons button:hover {
     background-color: #FA7D0B;
 }

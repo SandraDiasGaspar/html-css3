@@ -4,128 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Atlantida</title>
-    <link rel="stylesheet" href="formnov.css">
+    <link rel="stylesheet" href="corrigido1607.css">
     <style>
         header {
             width: 100%;
             margin-bottom: 0;
         }
-
         header img {
             width: 100%;
         }
-
         main {
             padding: 0;
-            margin: 0 auto;
+            margin: 0;
             width: 100%;
             max-width: 1050px;
-            box-sizing: border-box;
         }
-
         form {
             padding-top: 0;
             width: 100%;
-            box-sizing: border-box;
         }
-
         .nav-links {
             display: flex;
             justify-content: space-around;
+            /*margin-bottom: 20px;*/
             background-color: black;
             margin: 0;
             padding: 0;
-            flex-wrap: wrap; /* Adicionado para responsividade */
+            flex-wrap: wrap;
         }
-
         .nav-links a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px; /* Ajustado para responsividade */
+            padding: 10px 20px;
             background-color: rgb(19, 204, 120);
             border-radius: 10px;
-            font-size: 16px; /* Reduzido para responsividade */
+            font-size: 16px;
             font-weight: bolder;
             border: none;
             box-shadow: none;
-            margin: 5px; /* Adicionado espaço entre os botões */
+            margin: 5px;
         }
-
         .nav-links a:hover {
             background-color: #FA7D0B;
         }
-
+      
         .botao, .botao2, .botao3 {
             text-align: center;
             padding: 20px;
             margin: 0;
         }
-
-        .section-content {
-            display: none;
-            margin: 0;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-            background-color: transparent;
-        }
-
-        .section-content.active {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .section-content > div {
-            flex: 1 1 calc(33.333% - 10px);
-            box-sizing: border-box;
-            margin: 5px;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-        }
-
-        .section-content::before,
-        .section-content::after {
-            content: none;
-        }
-
-        .section-content input,
-        .section-content select,
-        .section-content button {
-            margin: 0;
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
-            outline: none;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .full-width {
-            flex: 1 1 100%;
-        }
-
-        .full-width,
-        .botao3 {
-            margin: 0;
-            padding: 0;
-        }
-
-        .full-width:before,
-        .full-width:after,
-        .botao3:before,
-        .botao3:after {
-            content: none;
-        }
-
+     
         @media (max-width: 768px) {
             .section-content > div {
                 flex: 1 1 100%;
             }
-
             .nav-links {
-                flex-direction: column; /* Coloca os links em coluna para dispositivos pequenos */
+                flex-direction: column;
             }
         }
     </style>
@@ -202,11 +136,18 @@
                 </div>
             </div>
         </fieldset>
-              <fieldset>
-            <div id="sectionHotels" class="section-content">
-                <!-- Adicione aqui os campos relacionados a hotéis -->
-            </div>
-        </fieldset>
+             <fieldset>
+                    <div id="sectionHotels" class="section-content single-column">
+                        <h3>For Hotel Booking please use the follow link and the promotion code</h3>
+                        <br>
+                        <a href="https://www.editoryhotels.com/porto-palacio/?gclid=CjwKCAjwsfuYBhAZEiwA5a6CDIADU80R-olo7pY5dsse9bTF25p7dR8pcelFejb6-DoV-7nw4vSzrxoCVskQAvD_BwE">Porto Palacio</a> promotion code THINKINGFOOTBALLNOV22
+                        <br>
+                       <a href="http://"www.editoryhotels.com/en/boulevard-aliados-porto/?gclid=Cj0KCQjwyOuYBhCGARIsAIdGQRMFuTIex01BlbdcnWUMR-YfBEk4Sov5f8itNjjS8xmEmfSZsHmbvTkaAj2_EALw_wcB>Editory Boulevard Aliados</a> promotion code THINKINGFOOTBALLNOV22
+                       <br>
+                        <a href="http://https://www.guestreservations.com/the-editory-house-ribeira-hotel/booking?gclid=Cj0KCQjwyOuYBhCGARIsAIdGQRNqfC7Ib00-t3VadiLTLAsQknER9opwyv4AUjlkmp8l6izw7T4IuqwaAtdOEALw_wcB">Editory House Ribeira</a> promotion code THINKINGFOOTBALLNOV22
+                    </div>
+                </fieldset>
+
         <fieldset>
              <div id="sectionTransfers" class="section-content">
                 <div>
@@ -262,23 +203,16 @@
             </div>
         </fieldset>
         <fieldset>
-            <div id="sectionTickets" class="section-content">
+            <div id="sectionTickets" class="section-content single-column">
             <div>
                     <h1>Partecipant</h1>
                     <p>General</p>
                     <p>320,00</p>
-                
-
-
             </div>
                 
                 <a href="http://segpag1507.html">BUY NOW</a>
             </div>
-          <!--  <div class="full-width">
-                <div class="botao3">
-                   
-                </div>-->
-         
+                  
         </fieldset>
     </form>
 </main>
@@ -377,13 +311,26 @@
         showSection('sectionTickets');
     });
     
-    function showSection(sectionId) {
+    /*function showSection(sectionId) {
+        document.getElementById('sectionFlights').style.display = 'none';
+        document.getElementById('sectionHotels').style.display = 'none';
+        document.getElementById('sectionTransfers').style.display = 'none';
+        document.getElementById('sectionTickets').style.display = 'none';
+    
+        document.getElementById(sectionId).style.display = 'block';
+    }*/
+
+     function showSection(sectionId) {
+        // Oculta todas as seções
         document.querySelectorAll('.section-content').forEach(function(section) {
             section.classList.remove('active');
         });
+    
+        // Mostra a seção selecionada
         document.getElementById(sectionId).classList.add('active');
     }
-</script>
+
+    </script>
     
 </body>
 </html>

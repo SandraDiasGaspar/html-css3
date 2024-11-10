@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+:root {
+    --cor0: hsl(240, 93%, 24%);
+    --cor1: blue;
+    --cor2: rgba(0, 217, 255, 0.87);
+    --fonte-padrao: "work sans", arial, sans-serif;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    position: relative;
+}
+
+nav.topo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: transparent; /* Torna o fundo transparente para aparecer sobre a imagem */
+    z-index: 1; /* Garante que fique acima da imagem */
+}
+
+.informacoes-contato {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.telefone {
+    color: white;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.menu a:hover {
+    color: #EB6A0E;
+}
+
+.imagem-principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.opcoesti {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.opcoesti h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.opcoesti p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.opcoesti ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.opcoesti ul li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+body {
+    background-color: grey;
+}
+.servicos-foto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px;
+}
+
+.servicos-texto {
+    max-width: 50%;
+}
+
+.servicos-texto h2 {
+    margin-bottom: 15px;
+}
+
+.servicos-texto p {
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--cor1);
+    color: white;
+    text-align: center;
+}
